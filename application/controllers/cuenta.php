@@ -981,6 +981,13 @@ class Cuenta extends CI_Controller
 			return FALSE;
 		}
 	}
+	private function _cancel_guerrero($guerrero_id)
+	{
+		$this->load->model('guerrero_model');
+		$this->payflow->ACTION			= 'A';		// A = Add new recurring payment
+		$this->payflow->ORIGID			= $registration->pnref;									// Authorization PNREF
+		$this->payflow->process();
+	}
 }
 
 /* End of file cuenta.php */
