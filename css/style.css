@@ -1,0 +1,3104 @@
+/* HTML5 ✰ Boilerplate
+ * ==|== normalize ==========================================================
+ */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+::-moz-selection { background: #25ad00; color: #fff; text-shadow: none; }
+::selection { background: #25ad00; color: #fff; text-shadow: none; }
+
+a { color: #FFF; }
+a:visited { color: #FFF; }
+a:hover { color: #FFF; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+table button, table input { *overflow: auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+input:focus, select:focus, textarea:focus {outline: 0;}
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* ==|== primary styles =====================================================
+   Author: Nobox Development
+   ========================================================================== */
+
+html, body { height: 100%; }
+
+body {
+	font: 12px/1.5 Verdana, sans-serif;
+}
+
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top: -32767px;
+}
+
+#container {
+	min-height: 100%;
+	margin-bottom: -185px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 960px;
+  position: relative;
+}
+
+#main {
+	padding-bottom: 185px;
+}
+
+#main .error {
+	color: white;
+	background: red;
+	font-weight: bold;
+	padding: 5px;
+}
+#main small.error {
+	color: red;
+	background: white;
+	padding: 5px 0;
+}
+#main .error.other {
+	color: red;
+	background: white;
+	margin: 0;
+}
+
+#main .loading {
+	background: url(../img/ajax-loader.gif) no-repeat;
+	width: 16px;
+	height: 16px;
+	text-indent: -9999em;
+}
+
+
+#logo_footer {
+	background: url('../img/logo_guerreros_footer.png');
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+	width: 223px;
+	height: 88px;
+	text-indent: -9999em;
+}
+
+#general_footer { position: relative; }
+	#general_footer nav {
+		position: absolute;
+		bottom: 20px;
+		left: 35px;
+	}
+	#general_footer p {
+		color: #FFF;
+		font-size: 10px;
+		margin-left: 100px;
+		padding-top: 135px;
+		text-align: center;
+	}
+	#general_footer p.support { margin: -5px 0px 0px 100px; padding: 0px; }
+
+/* ==| Some button styles
+ * ========================================================================== */
+.green_btn {
+	font-size: 11px;
+	display: block;
+	text-transform: uppercase;
+	padding: 5px 10px 5px 10px;
+	border-radius: 5px 5px 5px 5px;
+	border: solid 1px #00c700;
+	color: #FFF;
+	background: #007f1b;
+	background: -moz-linear-gradient(top,  #007f1b 0%, #000000 46%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#007f1b), color-stop(46%,#000000));
+	background: -webkit-linear-gradient(top,  #007f1b 0%,#000000 46%);
+	background: -o-linear-gradient(top,  #007f1b 0%,#000000 46%);
+	background: -ms-linear-gradient(top,  #007f1b 0%,#000000 46%);
+	background: linear-gradient(top,  #007f1b 0%,#000000 46%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007f1b', endColorstr='#000000',GradientType=0 );
+}
+.green_btn:hover {
+	color: #99ff00;
+	background: #020706;
+	background: -moz-linear-gradient(top,  #020706 0%, #007f1b 99%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#020706), color-stop(99%,#007f1b));
+	background: -webkit-linear-gradient(top,  #020706 0%,#007f1b 99%);
+	background: -o-linear-gradient(top,  #020706 0%,#007f1b 99%);
+	background: -ms-linear-gradient(top,  #020706 0%,#007f1b 99%);
+	background: linear-gradient(top,  #020706 0%,#007f1b 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020706', endColorstr='#007f1b',GradientType=0 );
+}
+.green_line {
+	margin: 60px 0px 0px 0px;
+	clear: both;
+	border-top: solid 5px #99ff00;
+	padding: 20px 0px 0px 0px;
+}
+.gue_name, .gue_town { color: #006600; }
+a.gue_name:active, a.gue_name:link, a.gue_name:visited { text-decoration: none; color: #006600; }
+a.gue_name:hover { color: #004e00; text-decoration: underline; }
+
+
+
+/* ==| Warning Box - When a feed is empty
+ * ========================================================================== */
+.no_items_warning {
+	display: block;
+	width: 433px;
+	border: solid 3px #8cfe0a;
+	padding: 20px;
+	margin: auto;
+	background: #242a1f;
+	background: -moz-linear-gradient(top,  #242a1f 0%, #000000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#242a1f), color-stop(100%,#000000));
+	background: -webkit-linear-gradient(top,  #242a1f 0%,#000000 100%);
+	background: -o-linear-gradient(top,  #242a1f 0%,#000000 100%);
+	background: -ms-linear-gradient(top,  #242a1f 0%,#000000 100%);
+	background: linear-gradient(top,  #242a1f 0%,#000000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242a1f', endColorstr='#000000',GradientType=0 );
+}
+.no_items_warning #warning {
+	display: block;
+	width: 273px;
+	height: 250px;
+	margin: 10px 0px 15px 75px;
+	background: transparent url(../img/warning_sign.png) no-repeat;
+}
+.no_items_warning h3 { text-align: center; font-size: 24px!important; font-weight: normal; color: #8CFE0A; margin: 0px 0px 20px 0px; }
+.no_items_warning p { font-size: 14px; text-align: center; padding: 0px 20px 0px 20px; }
+
+/* ==| User welcome banner - First time registration
+ * ========================================================================== */
+#welcome_user {
+	display: block;
+	width: 950px;
+	height: 85px;
+	margin: 20px 0px 0px 0px;
+	background: transparent url(../img/user_welcome_bg.png) no-repeat;
+}
+#welcome_user h3 {
+	font-weight: normal;
+	text-align: center;
+	margin: 0px 0px 0px 0px;
+	padding: 25px 0px 0px 0px;
+	font-size: 18px;
+}
+
+
+/* ==| General Styles
+ * ========================================================================== */
+
+header {
+  background: #333 url('../img/cuartel/header_bg.png') repeat-x;
+  height: 73px;
+}
+  header h1 {
+    background: url('../img/logo_guerreros.png') no-repeat top left;
+    height: 71px;
+    margin: 0 0 0 -100px;
+    text-indent: -9999em;
+  }
+  header a#top_logo {
+  	display: block;
+  	text-indent: -9999px;
+  	height: 71px;
+  	margin: 0px 0px 0px -100px;
+  	background: url('../img/logo_guerreros.png') no-repeat top left;
+  }
+  header nav {
+    position: absolute;
+    top: 17px;
+    right: 0;
+  }
+
+#home footer, #cuenta footer, #power footer {
+  background: url('../img/bg_tile_site_footer.png') repeat-x bottom;
+  clear: both;
+  height: 185px;
+  margin-top: -110px;
+}
+  #home footer div#general_footer, #cuenta footer div#general_footer, #power footer div#general_footer {
+    background: url('../img/bg_site_footer.png') no-repeat center bottom;
+    height: 185px;
+    margin: 0 auto;
+    width: 1003px;
+  }
+
+
+/* ==|== Map Styles ======================================================= */
+
+#map_canvas{
+	width: 100%;
+	height: 400px;
+	position: absolute;
+	top: 72px;
+	background-color: black;
+	overflow: hidden;
+}
+
+.infoBox{
+	color:#005fa4;
+	display: block;
+	font-size: 10px;
+	padding: 15px 30px 0 0;
+}
+.infoBox strong{
+	position: relative;
+	font-size: 10px;
+	display: block;
+	color:#000000;
+	top:-2px;
+}
+.infoBox span {
+	display: block;
+	padding-right: 10px;
+}
+
+.infoBox .g_friends{
+	color: #022200;
+
+}
+.avatar{
+	border: 1px solid black;
+	width: 42px;
+	height: 44px;
+	display: block;
+	margin:-3px 5px 0 10px;
+	float: left;
+}
+
+
+
+.infoBox span.map_pointer {
+	position: absolute;
+	width: 36px;
+	height: 37px;
+	top: 24px;
+	left: 158px;
+}
+/* must create bg images for all the circles  */
+.infoBox span.map_pointer.honor {}
+	.infoBox span.map_pointer.honor.recruit { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.honor.soldier { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.honor.sergeant { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.honor.lieutenant { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.honor.captain { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.honor.major { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.honor.coronel { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.honor.general { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.honor.lightwarrior { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+
+.infoBox span.justice {}	
+	.infoBox span.map_pointer.justice.recruit { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.justice.soldier { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.justice.sergeant { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.justice.lieutenant { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.justice.captain { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.justice.major { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.justice.coronel { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.justice.general { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.justice.lightwarrior { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+
+.infoBox span.peace {}
+	.infoBox span.map_pointer.peace.recruit { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.peace.soldier { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.peace.sergeant { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.peace.lieutenant { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.peace.captain { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.peace.major { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.peace.coronel { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.peace.general { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.peace.lightwarrior { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+
+.infoBox span.brave {}
+	.infoBox span.map_pointer.brave.recruit { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.brave.soldier { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.brave.sergeant { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.brave.lieutenant { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.brave.captain { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.brave.major { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.brave.coronel { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.brave.general { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	.infoBox span.map_pointer.brave.lightwarrior { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+
+.infoBox span.rm {}
+	.infoBox span.map_pointer.rm.lightwarrior { background: url('../img/cuartel/ranks/rm/lightwarrior_small.png') no-repeat; }
+
+/* ==|== Home Styles ======================================================= */
+
+#home #main, #power #main {
+	background: #FFF url('../img/home/bg_home.png') repeat-x 0 399px;
+	padding-top: 414px;
+}
+
+#map_stats {
+	background: rgba(0,0,0,0.50);
+	border: 1px solid #136b00;
+	border-radius: 5px;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,0.35);
+	color: #FFF;
+	font-size: 8px;
+	list-style: none;
+	padding: 250px 0 5px 0;
+	position: absolute;
+	top: 87px;
+	right: 10px;
+	width: 100px;
+}
+	#flash_light_container {
+		padding: 0px;
+		position: absolute;
+		top: 99px;
+		right: -3px;
+		width: 100px;
+		height: 250px;
+		z-index: 998;
+	}
+	#flash_light_container.light_map { top: auto; bottom: 100px; right: 7px; }
+	#map_stats li {
+		padding: 0 0 5px 5px;
+	}
+	#map_stats li:first-child {
+		border-top: 1px solid #136b00;
+		padding-top: 10px;
+	}
+	#map_stats strong {
+		display: block;
+		float: left;
+		width: 71px;
+	}
+
+#welcome_box h2 {
+	background: url('../img/home/welcome_headline.png') no-repeat top center;
+	height: 35px;
+	margin: 0;
+	text-indent: -9999em;
+}
+#welcome_box p {
+	background: url('../img/home/bg_welcome_headline.png') no-repeat bottom center;
+	font-size: 14px;
+	margin: 0;
+	padding: 0 135px 15px;
+	text-align: center;
+}
+#welcome_box ul {
+	background: url('../img/home/icons_welcome_sections.png') no-repeat bottom center;
+	list-style: none;
+	padding: 0;
+}
+#welcome_box li {
+	float: left;
+	margin: 0 20px;
+	padding: 0;
+	width: 280px;
+	height: 314px;
+}
+#welcome_box li:last-child { margin-right: 0 }
+#welcome_box li p {
+	background: none;
+	font-size: 12px;
+	line-height: 1.6;
+	padding: 0;
+	text-align: left;
+}
+
+#comunidad, #recompensas, #combate {
+	background: no-repeat top left;
+	height: 35px;
+	text-indent: -9999em;
+}
+#comunidad {background-image: url('../img/home/txt_comunidad_guerreros.png')}
+#recompensas {background-image: url('../img/home/txt_mundo_recompensas.png')}
+#combate {background-image: url('../img/home/txt_apoya_fundacion.png')}
+
+#cta_home_banner {
+	clear: both;
+	margin-bottom: 20px;
+}
+
+#homepage {
+	
+}
+#home_feed {
+	float: left; 
+	width: 620px;
+}
+.notification {
+	width: 581px;
+}
+.entry-top, .entry, .entry-btm {
+  background: url('../img/home/bg_notification.png') no-repeat;
+}
+.entry-top {
+  background-position: top center;
+	height: 11px;
+}
+.entry {
+  background-color: #FFF;
+  background-position: 0 -12px;
+  padding: 5px 15px;
+}
+.entry p {
+  margin: 0 0 15px 0;
+}
+.entry-btm {
+	background-position: bottom center;
+	height: 17px;
+}
+#home_sidebar {
+	width: 275px; 
+	float: right;
+}
+
+#wanted_box{
+	background: url('../img/home/bg_box_wanted.png');
+	width: 275px;
+	height: 250px;
+	margin-bottom: 10px;
+	font-size: 11px;
+}
+#wanted_box h3 {
+	padding: 15px 0 0 30px;
+	color:white;
+	margin: 0;
+	font: bold 24px/1 proxima-nova, Verdana, sans-serif;
+	text-shadow: 1px 1px 1px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+	line-height: 25px;
+	text-transform: uppercase;
+}
+
+#hazte_guerrero {
+	background: url(../img/home/btn_register_home.png) no-repeat;
+	text-indent: -9999px;
+	width: 234px;
+	height: 46px;
+	display: block;
+	text-transform: uppercase;
+	margin: 0 auto;
+}
+#hazte_guerrero {
+	margin: 20px auto 0;
+}
+#wanted_box p{
+	color:#ffffff;
+	font-size: 14px;
+	padding: 0 0 0 30px;
+}
+
+#over_vaina
+{
+	display: block;
+	position: fixed;
+	overflow: scroll;
+	background: #000 url('../img/home/bg_lightbox.jpg') no-repeat top;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+#close_vaina{
+	display: block;
+	background: #000 url('../img/home/close.png') ;
+	width: 46px;
+	height: 46px;
+	position: fixed;
+	right: 10px;
+}
+
+#over_stuff
+{
+	width: 691px;
+	margin: 200px auto;
+}
+
+#video_container
+{
+	display: block;
+	background: black;
+/* 	border: 1px solid #06BA1C;	 */
+	box-shadow: 0 0 4px 4px rgba(19, 58, 2, .75);
+	width: 638px;
+	height: 423px;
+	margin: 0px auto;
+}
+
+
+#copy_info
+{
+	margin:30px auto;
+	width: 450px;
+	color: white;
+	text-align: justify;
+}
+
+#copy_info h2{
+	background: url('../img/home/lightbox_headline.png') no-repeat top center;
+	font-weight: bold;
+	text-shadow: 1px 0 4px rgba(0,0,0,0.50);
+	text-align: center;
+	text-indent: -9999em;
+	text-transform: uppercase;
+}
+#copy_info p{
+	line-height: 20px;
+	text-align: center;
+}
+#lightbox_register_cta {
+	background: url(../img/home/btn_lightbox_cta.png) no-repeat;
+	display: block;
+	margin: 0 auto;
+	width: 410px;
+	height: 100px;
+	text-indent: -9999px;
+}
+
+#home_feed .success, #welcome_box .success {
+	font-family: proxima-nova, sans-serif;
+	font-size: 20px;
+	color: #219c00;
+	margin: 0 0 42px;
+	display: block;
+	text-align: center;
+}
+
+/* ==|== Power Page Styles ======================================================= */
+#power_container { width: 600px; margin: auto; }
+#power_main { text-align: center; }
+#statspage { height: 400px; }
+#statspage h1 {
+	font-weight: normal;
+	color: #006015;
+	font-size: 40px;
+	border-bottom: solid 2px #CCC;
+	padding: 0px 0px 6px 0px;
+	font-family: "proxima-nova", "Trebuchet MS", sans-serif
+}
+#statspage h3 { font-weight: normal; font-size: 20px; }
+#statspage h3 span { font-weight: bold; color: #006015; }
+body[data-controller="power"] #general_footer p { text-align: left; margin-left: 0px; }
+
+/* ==|== Account Styles ===================================================== */
+
+#steps {
+  margin-top: 25px;
+}
+#steps ul {
+  background: #FFF url('../img/cuenta/bg_steps.png') repeat-x bottom;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  width: 100%;
+}
+  #steps li {
+    background: url('../img/cuenta/bg_steps_separator.png') no-repeat right center;
+    float: left;
+    border: 2px solid transparent;
+    text-align: center;
+    padding: 10px 0;
+    width: 316px;
+  }
+  #step1 li:last-child {background:none;}
+  #step2 li, #step3 li {background:none;}
+	#step3 li:first-child{ background: url('../img/cuenta/bg_steps_separator.png') no-repeat right center; }
+
+  #steps li.selected {
+    background: #41d019 url('../img/cuenta/bg_steps_selected.png') repeat-x bottom;
+    border: 2px solid #25ad00;
+  }
+  #step1 .selected {
+    border-radius: 5px 0 0 5px;
+  }
+  #step2 .selected {
+    border-radius: 0;
+  }
+  #step3 .selected {
+    border-radius: 0 5px 5px 0;
+  }
+
+  #steps a {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  #steps .selected a {
+    color: #FFF;
+    text-shadow: 1px 0 4px rgba(0,0,0,0.50);
+  }
+
+#register { padding-bottom: 30px; }
+#register fieldset {margin: 0; padding: 0;}
+
+#register h2 {
+  border-bottom: 5px solid #e0e0e0;
+  color: #004512;
+  font: bold 24px "proxima-nova", "Trebuchet MS", sans-serif;
+  padding: 0 0 10px 7px;
+}
+#register fieldset {
+  margin: 0 7px 30px;
+}
+#register label {
+  font-weight: bold;
+}
+#register input[type=text],
+#register input[type=tel],
+#register input[type=date],
+#register input[type=number],
+#register input[type=email] {
+  background: #e2e2e2;
+  border: 1px solid #FFF;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,.15);
+  padding: 5px;
+}
+
+#register input[type=text]:focus,
+#register input[type=tel]:focus,
+#register input[type=date]:focus,
+#register input[type=number]:focus,
+#register input[type=email]:focus {
+  background: #f0f0f0;
+  border: 1px solid rgb(6,186,28);
+  box-shadow: 0 0 4px 2px rgba(6,186,28,.85);
+}
+#register input.form_error {
+	border: 1px solid red;
+}
+
+#register ul {list-style: none; padding: 0;}
+
+#register .clearfix {
+  clear: both;
+  position: relative;
+}
+#register input[type=image] {
+  position: absolute;
+  top: 0;
+}
+#register #submit_next {
+  right: 0;
+}
+#register #submit_prev {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/cuenta/btn_previous.png) no-repeat;
+	text-indent: -9999px;
+	text-transform: capitalize;
+	width: 158px;
+	height: 40px;
+}
+
+#choose_name {}
+  #choose_name input {
+    margin: 0 15px;
+    width: 300px;
+  }
+  #choose_name select {
+    margin-left: 15px;
+    width: 225px;
+  }
+  #choose_name small {
+    display: block;
+    margin-top: 10px;
+  }
+	#choose_name .error {
+		margin: 0 0 0 157px;
+	}
+  #choose_legion ul, #subscription_type_list {
+    overflow: hidden;
+    margin: 30px 0;
+  }
+  #choose_legion li, #subscription_type_list li {
+    display: block;
+    float: left;
+    margin: 0 18px 0 0;
+    position: relative;
+    width: 225px;
+  }
+	#choose_legion li, #subscription_type_list div {
+		background:  url(../img/cuenta/bg_choose.jpg) no-repeat top;
+	}
+  #choose_legion li {
+    height: 316px;
+    margin-right: 15px;
+  }
+  #choose_legion li:last-child, #subscription_type_list li:last-child {margin: 0}
+  #choose_legion .selected, #subscription_type_list .selected > div {
+    background-position: bottom;
+  }
+  
+   #datos_configuration #choose_legion .selected {
+    background-position: bottom;
+  }
+ 
+  #choose_legion label {
+    display: block;
+    font: bold 21px "proxima-nova", "Trebuchet MS", sans-serif;
+    padding-top: 15px;
+    height: 240px;
+    width: 225px;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.25);
+    text-transform: uppercase;
+  }
+  
+  #datos_configuration #choose_legion li {
+		background:  url(../img/cuenta/bg_choose_small.png) no-repeat top;
+	}
+  #datos_configuration #choose_legion label{
+   	color:black;
+  }
+  #datos_configuration #choose_legion .selected label {
+  	color: #FFF;
+  }
+  
+  #datos_configuration #choose_legion li {
+    height: 186px;
+    margin-right: 15px;
+    width:166px;
+  }
+
+  
+  #datos_configuration #choose_legion label {
+    display: block;
+    font: bold 21px "proxima-nova", "Trebuchet MS", sans-serif;
+    padding-top: 15px;
+    height: 156px;
+    width: 166px;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.25);
+    text-transform: uppercase;
+  }
+	
+  #datos_configuration #choose_name input {
+    margin: 0 15px;
+    width: 300px;
+  }
+  #datos_configuration #choose_name select {
+    margin-left: 15px;
+    width: 225px;
+  }
+  #datos_configuration #choose_name small {
+    display: block;
+    margin-top: 10px;
+  }
+
+#datos_configuration input[type=text],
+#datos_configuration input[type=tel],
+#datos_configuration input[type=date],
+#datos_configuration input[type=number],
+#datos_configuration input[type=email] {
+  background: #e2e2e2;
+  border: 1px solid #FFF;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,.15);
+  padding: 5px;
+}
+
+#datos_configuration input[type=text]:focus,
+#datos_configuration input[type=tel]:focus,
+#datos_configuration input[type=date]:focus,
+#datos_configuration input[type=number]:focus,
+#datos_configuration input[type=email]:focus {
+  background: #f0f0f0;
+  border: 1px solid rgb(6,186,28);
+  box-shadow: 0 0 4px 2px rgba(6,186,28,.85);
+}
+ 
+#datos_configuration fieldset {
+  margin: 0 0px 30px;
+}
+  #choose_legion .selected label {
+  	color: #FFF;
+  }
+  
+   #datos_configuration #choose_legion label[for="legion_hon"] { background: url(../img/icon_shield_hon_small.png) no-repeat bottom center; }
+   #datos_configuration #choose_legion label[for="legion_val"] { background: url(../img/icon_shield_val_small.png) no-repeat bottom center; }
+   #datos_configuration #choose_legion label[for="legion_jus"] { background: url(../img/icon_shield_jus_small.png) no-repeat bottom center; }
+   #datos_configuration #choose_legion label[for="legion_paz"] { background: url(../img/icon_shield_paz_small.png) no-repeat bottom center; }
+
+  #choose_legion label[for="legion_hon"] { background: url(../img/icon_shield_hon.png) no-repeat bottom center; }
+  #choose_legion label[for="legion_val"] { background: url(../img/icon_shield_val.png) no-repeat bottom center; }
+  #choose_legion label[for="legion_jus"] { background: url(../img/icon_shield_jus.png) no-repeat bottom center; }
+  #choose_legion label[for="legion_paz"] { background: url(../img/icon_shield_paz.png) no-repeat bottom center; }
+
+  #choose_legion input, #subscription_type_list input {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 106px;
+    top: 275px;
+  }
+  
+  
+  #datos_configuration #choose_legion input {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 78px;
+    top:173px;
+  }
+	#legion_description_list {
+		background: url('../img/cuenta/bg_legion_desc.png') no-repeat top center;
+		clear: both;	
+		height: 150px;
+	}
+	#legion_description_list li {
+		display: none;
+		padding: 20px 30px;
+	}
+	#legion_description_list li.selected {
+		display: block;
+	}
+	#legion_description_list h3 {
+		background: url('../img/cuenta/legion_underline.png') no-repeat left bottom;
+		color: #00350d;
+		font: 18px proxima-nova, Verdana, sans-serif;
+		margin: 0;
+		padding-bottom: 5px;
+		text-transform: uppercase;
+	}
+  #subscription_type_list div {
+  	height: 316px;
+  }
+  #subscription_type_list img {
+  	display: block;
+  	margin: 0 auto;
+  	padding-top: 50px;
+  }
+  #subscription_type_list label {
+  	display: block;
+  	font: 18px "proxima-nova", "Trebuchet MS", sans-serif;
+		margin-top: 15px;
+  	text-align: center;
+  }
+  #subscription_type_list label span {
+  	font-size: 12px;
+  	font-weight: bolder;
+  	text-transform: uppercase;
+  }
+  #subscription_type_list strong {
+  	color: #18660b;
+  	display: block;
+  	font-size: 48px;
+  	margin: -5px 0;
+  }
+
+#profile_info {
+  float: left;
+  width: 525px;
+	}
+  #profile_info fieldset li {
+    margin: 5px 0;
+  	}
+  #profile_info li > label, #location label, .billing label {
+    display: block;
+    float: left;
+    position: relative;
+    top: 7px;
+    width: 175px;
+  	}
+  #profile_info input[type=text],
+  #profile_info input[type=tel],
+  #profile_info input[type=date],
+  #profile_info input[type=number],
+  #profile_info input[type=email],
+  .billing input {
+    width: 300px;
+  	}
+    #profile_info select {
+      margin-top: 7px;
+      width: 200px;
+    	}
+    #profile_info small {
+      display: block;
+      margin-left: 175px;
+      	}
+    #profile_info small label {
+      display: inline;
+      float: none;
+      width: auto;
+      font-weight: normal;
+    }
+	.multi_input input {
+		margin-left: 175px;
+	}
+	.multi_input .first {
+		margin: 0 0 5px;
+	}
+	
+	#profile_info .error a {
+		color: #a00;
+	}
+	
+  small.privacy_note {
+    margin: 5px 0 0 180px;
+    color: #666;
+  }
+
+  #gender {
+    padding-top: 7px;
+  	}
+    #gender label {
+      display: inline;
+      font-weight: normal;
+      margin-right: 50px;
+    }
+#guerrero_birthday {
+	display: none;
+}
+#location {}
+  #location h3 {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  #location li {
+    margin: 5px 0;
+  }
+  #map_canvas.selection_map {
+    height: 260px;
+    width: 410px;
+    position: relative;
+	top: 0px;
+  }
+  #location label {
+    width: 95px;
+  }
+	#location small {
+		display: block;
+		margin-left: 100px		
+	}
+	#location small label {
+		display: inline;
+		float: none;
+		width: auto;
+		font-weight: normal;
+		top: 0;
+	}
+	#guerrero_map_town, #guerrero_geo_lat, #guerrero_geo_long {
+		width: 300px;
+	}
+[data-action=registro] ul {
+	list-style: none;
+	padding: 0;
+}
+
+.billing div {
+	display: block;
+	background: #F0F0F0;
+	border-radius:10px;
+	padding: 0 0 15px 0 !important;
+}
+.bg_round ul.card_details { width: 400px; }
+.bg_round ul.card_rules {
+	font-size: 11px;
+	float: right;
+	background: white;
+	border-radius: 10px;
+	width: 400px;
+	margin: 20px 20px 0px 0px;
+}
+.bg_round ul.card_rules li { list-style: disc; list-style-position: inside; padding: 13px 10px 13px 20px; }
+.bg_round small.right_message {
+	float: right;
+	display: inline;
+	margin: -19px 0px 0px 0px!important;
+}
+span.accepted_cards {
+	display: block;
+	margin: 2px 0px 0px 227px;
+	width: 85px;
+	height: 30px;
+	background: transparent url(../img/cuenta/accepted_cards.png) no-repeat;
+}
+.bg_round small.card_info { margin: -26px 0px 0px 0px !important; }
+.billing ul {
+  background: #F0F0F0;
+  border-radius:10px;
+  padding: 0 0 15px 0 !important;
+}
+.billing li {
+	padding: 10px 30px;
+	}
+	.billing li small {
+		color: #666;
+		display: block;
+		font-weight: normal;
+		margin-left: 132px;
+		padding-top: 5px;
+  }
+.billing h3 {
+	color: #004512;
+	border-bottom: 1px solid #CCC;
+}
+#main .billing small.error {			/* #main id to override error styles via specificity */
+	background: #F0F0F0;
+}
+
+#billing_info {}
+	#billing_info label { width: 300px; margin-bottom: 10px; float: none;}
+	#billing_info input {display:block;}
+	#billing_info small {margin: 0; padding: 0;}
+	#cc_number {font-size: 18px; font-family: monospace;}
+
+#billing_adr {}
+  #billing_adr label {width: 130px;}
+  #billing_adr select {width: 150px; margin: 5px 0;}
+
+#confirmation .error {
+	display: block;
+}
+
+#confirm_copy {
+	background: #FFF url('../img/cuenta/bg_confirm_copy.png') no-repeat left top;
+	float: left;
+	height:  387px !important;
+	width: 711px !important;
+}
+#confirm_copy h3 {
+	color: #145f0a;
+	font: 24px/1 'proxima-nova', 'Trebuchet MS', sans-serif;
+	margin: 25px 75px;
+	text-transform: uppercase;
+}
+#confirm_copy p {
+	font-size: 20px;
+	color: #333;
+	margin: 0 75px;
+}
+
+#login_form,
+#lost_password,
+#register_cta,
+#password_reset {
+	background: url('../img/cuenta/bg_lost_password.png') no-repeat top center;
+	margin: 25px auto 0;
+	padding-top: 30px;
+	height: 228px;
+	width: 457px;
+}
+#lost_password {
+	background: url('../img/cuenta/bg_reset_password.png') no-repeat top center;
+	height: 309px;
+}
+#password_reset,
+#password_reset.error_form {
+	background: url('../img/cuenta/bg_reset_password_big.png') no-repeat top center;
+	height: 362px;
+}
+#login_form {
+	background-image: url('../img/cuenta/bg_login_form.png');
+	padding-top: 20px;
+	height: 338px;
+}
+#login_form.error_form {
+	background-image: url('../img/cuenta/bg_reset_password_big.png');
+	height: 342px;
+}
+#login_form h3, #register_cta h3 {
+	background:  url('../img/cuenta/headline_ingresar_cuenta.png') no-repeat top center;
+	margin: 0;
+	text-indent: -9999em;
+}
+#register_cta {
+	padding-top: 20px;
+}
+#register_cta h3 {
+	background-image: url('../img/cuenta/headline_register_cta.png');
+	height: 25px;
+}
+#register_cta p {
+	margin: 24px 50px 30px;
+	text-align: center;
+}
+#register_cta a {
+	display: block;
+	text-align: center;
+}
+
+#login_form {
+	position: relative;
+}
+	#login_form p {
+		margin: 15px 50px;
+		text-align: center;
+	}
+	#login_form input[type=email],
+	#login_form input[type=password],
+	#lost_password input[type=email],
+	.icon_input input[type=email],
+	.icon_input input[type=password] {
+		border: 1px solid #FFF;
+		border-radius: 5px;
+		box-shadow: inset 0 0 3px 1px rgba(0,0,0,0.25);
+		display: block;
+		font-size: 14px;
+		margin-left: 100px;
+		padding: 7px;
+		width: 275px;
+	}
+	#login_form input[type=email], #login_form input[type=password] {
+		padding: 7px;
+		width: 350px;
+	}
+	#login_form label {
+		font-weight: bold;
+	}
+	#login_form label, #login_form input[type=email], #login_form input[type=password] {
+		display:  block;
+		margin: 10px 40px;
+	}
+	#login_form input[type=image] {
+		float: right;
+		margin: 5px 50px 0 0;
+	}
+	#get_pass {
+		display: block;
+		float: left;
+		margin: 15px 0 0 40px;
+	}
+	#login_form .error {
+		color: red;
+		background: transparent;
+		margin: 0 0 0 40px;
+		padding: 0;
+	}
+	#lost_password h3 {
+		background: url('../img/cuenta/headline_recover_pass.png') no-repeat top center;
+		height: 25px;
+		text-transform: uppercase;
+		text-indent: -9999em;
+	}
+	#lost_password label,
+	#lost_password p,
+	.icon_input label {
+		padding: 5px 0 5px 100px;
+		display: block;
+		height: 20px;
+	}
+	#lost_password label,
+	#lost_password p,
+	.icon_input .email_label {
+		background: url('../img/cuenta/icon_email.png') no-repeat 40px 10px;
+		height: 65px;
+	}
+	.icon_input .email_label[for=reset_email] {
+		height: 29px;
+	}
+	
+	#lost_password label {
+		margin: 15px auto;
+		width: 63%;
+	}
+	
+	#lost_password p {
+		margin: 12px 45px 12px 0;
+	}
+	#lost_password .error, #password_reset .error {
+		color: red;
+		background: transparent;
+		display: block;
+		margin: 5px 0 0 100px;
+		padding-left: 0;
+		position: absolute; /* Remove from structure so submit CTA doesn't move */
+	}
+	#lost_password #recovery_email {
+		margin: 0 auto;
+	}
+	#password_reset .error {
+		position: static;
+	}
+	#password_reset .error.other {
+		background: transparent;
+		padding-bottom: 0;
+		margin: 5px 0 0 100px;
+	}
+	#lost_password input[type=image] {
+		display: block;
+		margin: 30px auto 0;
+	}
+	#password_reset input[type=image] {
+		display: block;
+		margin: 30px auto 0;
+	}
+	#lost_password a {
+		background: url(../img/cuenta/btn_ok.png) no-repeat;
+		text-indent: -9999em;
+		text-transform: uppercase;
+		display: block;
+		width: 118px;
+		height: 40px;
+		margin: 65px auto 0;
+	}
+	
+	#password_reset h3 {
+		background: url('../img/cuenta/headline_reset_pass.png') no-repeat top center;
+		height: 26px;
+		text-transform: uppercase;
+		text-indent: -9999em;
+		margin-top: 0;
+	}
+	
+
+/* ==|== Profile Styles ======================================== */
+
+#social, #recover, #login {
+  background: #000 url('../img/cuartel/bg_page_green.jpg') no-repeat top center;
+  color: #FFF;
+  }
+  #logged_menu {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 250px;
+  	}
+    #logged_menu li {
+      float: left;
+      padding: 25px 25px 25px 0;
+    }
+    #logged_menu a, #logged_menu a:visited {
+      color: #00cc00;
+      font-size: 16px;
+      text-decoration: none;
+      text-shadow: 0 0 2px rgba(0,0,0,0.75);  
+    }
+    #logged_menu a.selected {
+      background: url('../img/cuartel/bg_header_menu_highlight.png') no-repeat center bottom;
+      color: #FFF;
+      padding: 25px 7px;
+      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+    }
+  #logged_info {
+  	color: #FFF;
+  	position: absolute;
+  	top: 5px;
+  	right: 0;
+  	text-align: right;
+  }
+	#logged_info .user_pic {
+		position: absolute;
+		right: 0;
+	}
+	#logged_info img { width: 50px; height: 50px; }
+	#logged_info strong {
+		color: #19c605;
+		display: block;
+		margin: 4px 65px 0 0;
+	}
+	#logged_info span {
+		display: block;
+		margin-right: 65px;
+	}
+
+  #social #main {
+  	min-height: 860px;
+  }
+  footer {
+    background: url('../img/cuartel/bg_footer_tile.png') repeat-x top;
+    clear: both;
+    height: 190px;
+    }
+    footer div#general_footer {
+      background: url('../img/cuartel/bg_footer.png') no-repeat top left;
+      margin: 0 auto;
+      height: 190px;
+      width: 1002px;
+    }
+    footer div.fb-share {}
+    footer div.twitter-share { float: right; width: 100px; }
+    footer div#social_share { position: absolute; bottom: 20px; left: 0; width: 350px; }
+    
+    body[data-action="perfil"] #map_canvas{
+    	width:708px;
+    	height:166px;
+    	margin-left: 237px;
+    	margin-top: 24px;
+    	border: 1px solid #0F3;
+    	top: 0;
+    }
+    .profile_btn {
+			background: #005811 url('../img/perfil/bg_profile_btn.png') repeat-x bottom;
+			background: -moz-linear-gradient(top, #005811 0%, #004b0f 5%, #003a0c 15%, #020a05 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#005811), color-stop(5%,#004b0f), color-stop(15%,#003a0c), color-stop(100%,#020a05));
+			background: -webkit-linear-gradient(top, #005811 0%,#004b0f 5%,#003a0c 15%,#020a05 100%);
+			background: -o-linear-gradient(top, #005811 0%,#004b0f 5%,#003a0c 15%,#020a05 100%);
+			background: -ms-linear-gradient(top, #005811 0%,#004b0f 5%,#003a0c 15%,#020a05 100%);
+			background: linear-gradient(top, #005811 0%,#004b0f 5%,#003a0c 15%,#020a05 100%);
+    	border: 1px solid #19c004;
+    	border-radius: 5px;
+    	color: #FFF;
+    	font-weight: bold;
+    	padding: 2px 5px;
+    	text-align: center;
+    	text-decoration: none;
+    	text-shadow: 0 1px 2px rgba(0,0,0,0.85);
+    	text-transform: uppercase;
+    }
+
+
+    body[data-action="perfil"] #menu {
+    	list-style: none;
+    	padding: 0;
+    	margin: 0;
+    }
+    body[data-action="perfil"] #menu strong {
+    	position: absolute;
+    	font-size: 42px;
+    	color:#fff;    	
+    	/* right: 234px; */
+    	right:137px;
+    	top: 35px;
+    	text-align: center;
+    	width: 90px;
+    	display: block;
+    }
+    
+    body[data-action="perfil"] #menu li {
+    	position: relative;
+		background: url('../img/perfil/bg_counter.png') no-repeat top left;
+		height: 74px;
+		/* width: 218px; */
+		width:120px;
+		margin-bottom: -25px;
+		color:#00ff2a;
+		font-size: 15px;
+		font-family: 'proxima-nova', sans-serif;
+		line-height: 0;
+		padding: 34px 0 0 100px;
+		text-shadow: 2px 2px 2px #000000;
+		filter: dropshadow(color=#000000, offx=2, offy=2);
+		}
+    
+    body[data-action="perfil"] .feed {
+    	margin-top: 210px;
+    	margin-right: 14px;
+    	margin-left: 38px;
+    }
+   	body[data-action="perfil"] #sidebar {
+    	margin-top: 210px;
+    }
+    body[data-action="perfil"] #user_info {
+    	padding-top: 8px;
+    	height: 126px;
+    	margin-top: 20px;
+    }
+    body[data-action="perfil"] #dash_menu #user_info{
+  		border: none;
+   	}
+   	body[data-action="perfil"] #dash_menu{
+			margin-top: 0px;
+   	}
+	body[data-action="perfil"] .user_pic{
+	}
+	body[data-action="perfil"] #dash_menu #user_info #edit_profile { top: 4px; left: 93px; margin: 0px 0px 0px 0px; }
+	#sub_user_info{
+		font-size: 10px;
+		width: 96px;
+		position: relative;
+		top: -125px;
+		left: 123px;
+	}
+	#sub_user_info strong{
+		color: #00FF2A;
+		display: block;
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	#sub_user_info span { font-size: 11px; }
+	#sub_user_info p.real_name { font-size: 13px; }
+	#sub_user_info p { margin: 0px 0px 4px 0px; font-size: 11px; }
+	#sub_user_info p span { color: #009900; font-size: 11px!important; }
+	#sub_user_info .add {
+		margin: 15px 0 0;
+		display: block;
+	}
+	#sub_user_info .loading {
+		display: none;
+		margin: 15px auto;
+		color: #ccc;
+	}
+	#sub_user_info .feedback {
+		display: none;
+		margin: 15px auto;
+		color: #ccc;
+		font-size: 9px;
+	}
+	
+	#user_info img {
+		width: 105px;
+		height: 115px;
+		margin-top: -4px;
+		margin-left: -4px;
+	}
+	#user_info img.dashmenu { width: 75px; height: 75px; }
+	#edit_profile { 
+		text-indent: -99999px; 
+		position: absolute; 
+		top: 0px; 
+		left: 191px;
+		width: 16px; 
+		height: 16px;
+		margin: 0px 0px 0px 10px;
+		background: transparent url('../img/cuartel/smallPencil_edit_icon.jpg') no-repeat;
+	}
+	body[data-action="perfil"] #edit_profile { top: 25px; left: 920px; }
+	
+	body[data-action="index"] #profile_index { margin-top: 35px; }
+	
+	#rank_badge {
+		display: block;
+		margin: 34px 0px 10px 0px;
+		width: 210px;
+		height: 82px;
+		padding: 10px;
+		background: transparent url(../img/perfil/rank_bg.png) no-repeat;
+	}
+	#rank_badge span { 
+		display: block;
+		float: left;
+		width: 55px;
+		height: 55px;
+		margin: 10px 10px 0px 0px;
+	}
+	#rank_badge span.honor {} /* must create bg images for all the shields and ranks */
+		#rank_badge span.honor.recruit { background: transparent url(../img/cuartel/ranks/honor/recruit.png) no-repeat; }
+		#rank_badge span.honor.soldier { background: transparent url(../img/cuartel/ranks/honor/soldier.png) no-repeat; }
+		#rank_badge span.honor.sergeant { background: transparent url(../img/cuartel/ranks/honor/sergeant.png) no-repeat; }
+		#rank_badge span.honor.lieutenant { background: transparent url(../img/cuartel/ranks/honor/lieutenant.png) no-repeat; }
+		#rank_badge span.honor.captain { background: transparent url(../img/cuartel/ranks/honor/captain.png) no-repeat; }
+		#rank_badge span.honor.major { background: transparent url(../img/cuartel/ranks/honor/major.png) no-repeat; }
+		#rank_badge span.honor.coronel { background: transparent url(../img/cuartel/ranks/honor/coronel.png) no-repeat; }
+		#rank_badge span.honor.general { background: transparent url(../img/cuartel/ranks/honor/general.png) no-repeat; }
+		#rank_badge span.honor.lightwarrior { background: transparent url(../img/cuartel/ranks/honor/lightwarrior.png) no-repeat; }
+	
+	#rank_badge span.justice {}
+		#rank_badge span.justice.recruit { background: transparent url(../img/cuartel/ranks/justice/recruit.png) no-repeat; }
+		#rank_badge span.justice.soldier { background: transparent url(../img/cuartel/ranks/justice/soldier.png) no-repeat; }
+		#rank_badge span.justice.sergeant { background: transparent url(../img/cuartel/ranks/justice/sergeant.png) no-repeat; }
+		#rank_badge span.justice.lieutenant { background: transparent url(../img/cuartel/ranks/justice/lieutenant.png) no-repeat; }
+		#rank_badge span.justice.captain { background: transparent url(../img/cuartel/ranks/justice/captain.png) no-repeat; }
+		#rank_badge span.justice.major { background: transparent url(../img/cuartel/ranks/justice/major.png) no-repeat; }
+		#rank_badge span.justice.coronel { background: transparent url(../img/cuartel/ranks/justice/coronel.png) no-repeat; }
+		#rank_badge span.justice.general { background: transparent url(../img/cuartel/ranks/justice/general.png) no-repeat; }
+		#rank_badge span.justice.lightwarrior { background: transparent url(../img/cuartel/ranks/justice/lightwarrior.png) no-repeat; }
+	
+	#rank_badge span.peace {}
+		#rank_badge span.peace.recruit { background: transparent url(../img/cuartel/ranks/peace/recruit.png) no-repeat; }
+		#rank_badge span.peace.soldier { background: transparent url(../img/cuartel/ranks/peace/soldier.png) no-repeat; }
+		#rank_badge span.peace.sergeant { background: transparent url(../img/cuartel/ranks/peace/sergeant.png) no-repeat; }
+		#rank_badge span.peace.lieutenant { background: transparent url(../img/cuartel/ranks/peace/lieutenant.png) no-repeat; }
+		#rank_badge span.peace.captain { background: transparent url(../img/cuartel/ranks/peace/captain.png) no-repeat; }
+		#rank_badge span.peace.major { background: transparent url(../img/cuartel/ranks/peace/major.png) no-repeat; }
+		#rank_badge span.peace.coronel { background: transparent url(../img/cuartel/ranks/peace/coronel.png) no-repeat; }
+		#rank_badge span.peace.general { background: transparent url(../img/cuartel/ranks/peace/general.png) no-repeat; }
+		#rank_badge span.peace.lightwarrior { background: transparent url(../img/cuartel/ranks/peace/lightwarrior.png) no-repeat; }
+	
+	#rank_badge span.brave {}
+		#rank_badge span.brave.recruit { background: transparent url(../img/cuartel/ranks/brave/recruit.png) no-repeat; }
+		#rank_badge span.brave.soldier { background: transparent url(../img/cuartel/ranks/brave/soldier.png) no-repeat; }
+		#rank_badge span.brave.sergeant { background: transparent url(../img/cuartel/ranks/brave/sergeant.png) no-repeat; }
+		#rank_badge span.brave.lieutenant { background: transparent url(../img/cuartel/ranks/brave/lieutenant.png) no-repeat; }
+		#rank_badge span.brave.captain { background: transparent url(../img/cuartel/ranks/brave/captain.png) no-repeat; }
+		#rank_badge span.brave.major { background: transparent url(../img/cuartel/ranks/brave/major.png) no-repeat; }
+		#rank_badge span.brave.coronel { background: transparent url(../img/cuartel/ranks/brave/coronel.png) no-repeat; }
+		#rank_badge span.brave.general { background: transparent url(../img/cuartel/ranks/brave/general.png) no-repeat; }
+		#rank_badge span.brave.lightwarrior { background: transparent url(../img/cuartel/ranks/brave/lightwarrior.png) no-repeat; }
+	
+	#rank_badge span.rm {}
+		#rank_badge span.rm.lightwarrior { background: transparent url(../img/cuartel/ranks/rm/lightwarrior.png) no-repeat; }
+		
+	#rank_badge h4 { 
+		margin: 0;
+		padding: 0px 10px 0px 80px;
+		color: #00ff33; 
+		font-family: 'proxima-nova', sans-serif; 
+		font-size: 23px; 
+	}
+	#rank_badge h4.the_top { margin: 20px 0px 0px 0px; }
+	#rank_badge p { margin: 0px; font-size: 11px; }
+	
+	/* Clasees for the legion emblem in profile page */
+	span.legion_emblem {
+		display: block;
+		position: absolute;
+		top: 85px;
+		left: 63px;
+		width: 55px;
+		height: 55px;
+	}
+	span.legion_emblem.honor { background: transparent url(../img/cuartel/emblems/honor.png) no-repeat; }
+	span.legion_emblem.justice { background: transparent url(../img/cuartel/emblems/justice.png) no-repeat; }
+	span.legion_emblem.peace { background: transparent url(../img/cuartel/emblems/peace.png) no-repeat; }
+	span.legion_emblem.brave { background: transparent url(../img/cuartel/emblems/brave.png) no-repeat; }
+	span.legion_emblem.rm { background: transparent url(../img/cuartel/emblems/rm.png) no-repeat; }
+	
+	/* Clasees for the medal in profile page */
+	span.sub_type {
+		display: block;
+		position: absolute;
+		top: 4px;
+		left: -4px;
+		width: 30px;
+		height: 40px;
+	}
+	span.sub_type.basic { background: none; }
+	span.sub_type.bronze { background: transparent url(../img/cuartel/medals/bronze.png) no-repeat; }
+	span.sub_type.silver { background: transparent url(../img/cuartel/medals/silver.png) no-repeat; }
+	span.sub_type.gold { background: transparent url(../img/cuartel/medals/gold.png) no-repeat; }
+	
+/* Classes for the ranks badges */
+.box span.badge_circle {
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	top: 60px;
+	left: 50px;
+}
+.box span.badge_circle.honor {} /* must create bg images for all the circles */
+	.box span.badge_circle.honor.recruit { background: url('../img/cuartel/ranks/honor/recruit.png') no-repeat; }
+	.box span.badge_circle.honor.soldier { background: url('../img/cuartel/ranks/honor/soldier.png') no-repeat; }
+	.box span.badge_circle.honor.sergeant { background: url('../img/cuartel/ranks/honor/sergeant.png') no-repeat; }
+	.box span.badge_circle.honor.lieutenant { background: url('../img/cuartel/ranks/honor/lieutenant.png') no-repeat; }
+	.box span.badge_circle.honor.captain { background: url('../img/cuartel/ranks/honor/captain.png') no-repeat; }
+	.box span.badge_circle.honor.major { background: url('../img/cuartel/ranks/honor/major.png') no-repeat; }
+	.box span.badge_circle.honor.coronel { background: url('../img/cuartel/ranks/honor/coronel.png') no-repeat; }
+	.box span.badge_circle.honor.general { background: url('../img/cuartel/ranks/honor/general.png') no-repeat; }
+	.box span.badge_circle.honor.lightwarrior { background: url('../img/cuartel/ranks/honor/lightwarrior.png') no-repeat; }
+
+.box span.badge_circle.justice {}
+	.box span.badge_circle.justice.recruit { background: url('../img/cuartel/ranks/justice/recruit.png') no-repeat; }
+	.box span.badge_circle.justice.soldier { background: url('../img/cuartel/ranks/justice/soldier.png') no-repeat; }
+	.box span.badge_circle.justice.sergeant { background: url('../img/cuartel/ranks/justice/sergeant.png') no-repeat; }
+	.box span.badge_circle.justice.lieutenant { background: url('../img/cuartel/ranks/justice/lieutenant.png') no-repeat; }
+	.box span.badge_circle.justice.captain { background: url('../img/cuartel/ranks/justice/captain.png') no-repeat; }
+	.box span.badge_circle.justice.major { background: url('../img/cuartel/ranks/justice/major.png') no-repeat; }
+	.box span.badge_circle.justice.coronel { background: url('../img/cuartel/ranks/justice/coronel.png') no-repeat; }
+	.box span.badge_circle.justice.general { background: url('../img/cuartel/ranks/justice/general.png') no-repeat; }
+	.box span.badge_circle.justice.lightwarrior { background: url('../img/cuartel/ranks/justice/lightwarrior.png') no-repeat; }
+
+.box span.badge_circle.peace {}	
+	.box span.badge_circle.peace.recruit { background: url('../img/cuartel/ranks/peace/recruit.png') no-repeat; }
+	.box span.badge_circle.peace.soldier { background: url('../img/cuartel/ranks/peace/soldier.png') no-repeat; }
+	.box span.badge_circle.peace.sergeant { background: url('../img/cuartel/ranks/peace/sergeant.png') no-repeat; }
+	.box span.badge_circle.peace.lieutenant { background: url('../img/cuartel/ranks/peace/lieutenant.png') no-repeat; }
+	.box span.badge_circle.peace.captain { background: url('../img/cuartel/ranks/peace/captain.png') no-repeat; }
+	.box span.badge_circle.peace.major { background: url('../img/cuartel/ranks/peace/major.png') no-repeat; }
+	.box span.badge_circle.peace.coronel { background: url('../img/cuartel/ranks/peace/coronel.png') no-repeat; }
+	.box span.badge_circle.peace.general { background: url('../img/cuartel/ranks/peace/general.png') no-repeat; }
+	.box span.badge_circle.peace.lightwarrior { background: url('../img/cuartel/ranks/peace/lightwarrior.png') no-repeat; }
+	
+.box span.badge_circle.brave {}
+	.box span.badge_circle.brave.recruit { background: url('../img/cuartel/ranks/brave/recruit.png') no-repeat; }
+	.box span.badge_circle.brave.soldier { background: url('../img/cuartel/ranks/brave/soldier.png') no-repeat; }
+	.box span.badge_circle.brave.sergeant { background: url('../img/cuartel/ranks/brave/sergeant.png') no-repeat; }
+	.box span.badge_circle.brave.lieutenant { background: url('../img/cuartel/ranks/brave/lieutenant.png') no-repeat; }
+	.box span.badge_circle.brave.captain { background: url('../img/cuartel/ranks/brave/captain.png') no-repeat; }
+	.box span.badge_circle.brave.major { background: url('../img/cuartel/ranks/brave/major.png') no-repeat; }
+	.box span.badge_circle.brave.coronel { background: url('../img/cuartel/ranks/brave/coronel.png') no-repeat; }
+	.box span.badge_circle.brave.general { background: url('../img/cuartel/ranks/brave/general.png') no-repeat; }
+	.box span.badge_circle.brave.lightwarrior { background: url('../img/cuartel/ranks/brave/lightwarrior.png') no-repeat; }
+
+.box span.badge_circle.rm {}
+	.box span.badge_circle.rm.lightwarrior { background: url('../img/cuartel/ranks/rm/lightwarrior.png') no-repeat; }
+	
+	/* Little Notifications Box */
+	#top_notifications {
+		background: url('../img/cuartel/top_notifications_bg.png') no-repeat;
+		display: block;
+		height: 136px;
+		margin: 0px 0px 0px 0px;
+	}
+	#view_more_notifications {
+		text-indent: -999999px;
+		width: auto;
+		height: 40px;
+		margin: 0px 0px 20px 1px;
+		display: block;
+		background: url('../img/cuartel/top_notification_vermas_btn.png') no-repeat;
+	}
+	
+	#view_more_notifications_top {
+		text-indent: -999999px;
+		width: auto;
+		height: 40px;
+		margin: 0px 0px 20px 1px;
+		display: block;
+		background: url('../img/cuartel/top_notification_vermas_btn.png') no-repeat;
+	}
+	
+	#top_notifications ul {
+		margin: 0px 0px 0px 20px;
+		padding: 15px 10px 0px 0px!important;
+		width: 430px;
+	}
+	
+	#top_notifications .message .green_btn:link,
+	#top_notifications .message .green_btn:visited {
+		display: block;
+		float: right;
+		margin: 20px 0px;
+		text-decoration: none;
+	}
+	#top_notifications img.user_pic{
+		margin: 0px 20px 0px 20px;
+		width: 35px;
+		height: 35px;
+	
+	}
+	
+	
+	#top_notifications ul li { 
+		border-bottom: solid 1px #00ff33;
+		overflow: hidden;
+		padding: 0px 0px 6px 0px;
+		margin: 0px 0px 10px 0px;
+	}
+	#top_notifications ul li:last-child { border: none; }
+	#top_notifications ul li img { margin: 5px 15px 0px 0px; }
+	#top_notifications ul li p { margin: 0px 0px 0px 0px; }
+	#top_notifications ul li span.not_date {}
+	#top_notifications ul li span.badge_wheel {
+		width: 55px;
+		height: 55px;
+		display: block;
+		float: right;
+		margin: 0px 0px 0px 10px;
+	}
+	/* Badges */
+	#top_notifications ul li span.badge_wheel.honor {} /* must create bg images for all the shields */
+		#top_notifications ul li span.badge_wheel.honor.recruit { background: url('../img/cuartel/ranks/honor/recruit.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.honor.soldier { background: url('../img/cuartel/ranks/honor/soldier.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.honor.sergeant { background: url('../img/cuartel/ranks/honor/sergeant.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.honor.lieutenant { background: url('../img/cuartel/ranks/honor/lieutenant.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.honor.captain { background: url('../img/cuartel/ranks/honor/captain.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.honor.major { background: url('../img/cuartel/ranks/honor/major.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.honor.coronel { background: url('../img/cuartel/ranks/honor/coronel.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.honor.general { background: url('../img/cuartel/ranks/honor/general.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.honor.lightwarrior { background: url('../img/cuartel/ranks/honor/lightwarrior.png') no-repeat; }
+	
+	#top_notifications ul li span.badge_wheel.justice {}
+		#top_notifications ul li span.badge_wheel.justice.recruit { background: url('../img/cuartel/ranks/justice/recruit.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.justice.soldier { background: url('../img/cuartel/ranks/justice/soldier.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.justice.sergeant { background: url('../img/cuartel/ranks/justice/sergeant.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.justice.lieutenant { background: url('../img/cuartel/ranks/justice/lieutenant.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.justice.captain { background: url('../img/cuartel/ranks/justice/captain.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.justice.major { background: url('../img/cuartel/ranks/justice/major.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.justice.coronel { background: url('../img/cuartel/ranks/justice/coronel.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.justice.general { background: url('../img/cuartel/ranks/justice/general.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.justice.lightwarrior { background: url('../img/cuartel/ranks/justice/lightwarrior.png') no-repeat; }
+	
+	#top_notifications ul li span.badge_wheel.peace {}
+		#top_notifications ul li span.badge_wheel.peace.recruit { background: url('../img/cuartel/ranks/peace/recruit.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.peace.soldier { background: url('../img/cuartel/ranks/peace/soldier.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.peace.sergeant { background: url('../img/cuartel/ranks/peace/sergeant.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.peace.lieutenant { background: url('../img/cuartel/ranks/peace/lieutenant.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.peace.captain { background: url('../img/cuartel/ranks/peace/captain.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.peace.major { background: url('../img/cuartel/ranks/peace/major.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.peace.coronel { background: url('../img/cuartel/ranks/peace/coronel.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.peace.general { background: url('../img/cuartel/ranks/peace/general.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.peace.lightwarrior { background: url('../img/cuartel/ranks/peace/lightwarrior.png') no-repeat; }
+	
+	#top_notifications ul li span.badge_wheel.brave {}
+		#top_notifications ul li span.badge_wheel.brave.recruit { background: url('../img/cuartel/ranks/brave/recruit.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.brave.soldier { background: url('../img/cuartel/ranks/brave/soldier.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.brave.sergeant { background: url('../img/cuartel/ranks/brave/sergeant.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.brave.lieutenant { background: url('../img/cuartel/ranks/brave/lieutenant.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.brave.captain { background: url('../img/cuartel/ranks/brave/captain.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.brave.major { background: url('../img/cuartel/ranks/brave/major.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.brave.coronel { background: url('../img/cuartel/ranks/brave/coronel.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.brave.general { background: url('../img/cuartel/ranks/brave/general.png') no-repeat; }
+		#top_notifications ul li span.badge_wheel.brave.lightwarrior { background: url('../img/cuartel/ranks/brave/lightwarrior.png') no-repeat; }
+	
+	#top_notifications ul li span.badge_wheel.rm {}
+		#top_notifications ul li span.badge_wheel.rm.lightwarrior { background: url('../img/cuartel/ranks/rm/lightwarrior.png') no-repeat; }
+
+.user_pic {
+  border: 4px solid #FFF;
+}
+#social h2 {
+	border-bottom: 5px solid #8cfe0a;
+	font: 22px/1 'proxima-nova', sans-serif;
+	padding-bottom: 10px;
+}
+#page_desc {
+	color: #CCC;
+	font-size: 13px;
+	margin-bottom: 30px;
+}
+#social ul {
+	list-style: none;
+	padding: 0;
+}
+#some_info {
+	width: 455px;
+	height: 85px;
+	padding: 10px 20px 20px 20px;
+	background: transparent url(../img/perfil/some_info_bg.png) no-repeat;
+}
+#some_info p { margin: 5px 0px 0px 0px; width: 420px; }
+#some_info a#add_info {
+	float: right;
+	display: block; 
+	text-indent: -99999px; 
+	width: 44px; 
+	height: 44px; 
+	margin: 13px 24px 0px 20px;
+	padding: 0px 0px 0px 0px;
+	background: transparent url(../img/cuartel/recompensas/add_reward_btn.png) no-repeat; 
+}
+
+#dash_menu {
+  float: left;
+  margin-top: 35px;
+  width: 200px;
+}
+
+#dash_menu #user_info {
+	position: relative;
+  border-bottom: 1px solid #00ff33;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  min-height: 70px;
+}
+#dash_menu #user_info span { font-size: 13px; }
+body[data-action="social"] #dash_menu #user_info img { width: 57px; height: 61px; }
+	#dash_menu .user_pic {
+		float: left;
+		margin-right: 10px;
+	}
+	#user_info strong {
+		color: #75fd00;
+	}
+
+
+#menu {clear: both;}
+  #menu ul a {
+    color: #FFF;
+    display: block;
+    font-size: 14px;
+    padding: 10px 15px 12px 50px;
+    height: 35px;
+    width: 100%;
+    text-decoration: none;
+  }
+  #menu ul ul {}
+	#menu ul ul li {}
+  #menu ul ul a {
+  	font-size: 10px;
+  	padding: 0 0 0 50px;
+  	}
+  #menu .selected {
+    background: url('../img/cuartel/dashmenu/bg_selected.png') no-repeat top left;
+  }
+  #menu .selected a {
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.75);
+  }
+  #menu .sub_selected {
+    background: url('../img/cuartel/dashmenu/point_arrow.png') no-repeat 30px 1px;
+  }
+  #menu .mundo {
+	font-size: 13px;
+	padding-top: 3px;
+	width: 100px;
+  }
+  .cuartel {background: url('../img/cuartel/dashmenu/cuartel_icon.png') no-repeat 10px 7px;}
+  .perfil {background: url('../img/cuartel/dashmenu/perfil_icon.png') no-repeat 5px 4px;}
+  .guerreros {background: url('../img/cuartel/dashmenu/guerreros_icon.png') no-repeat 8px 7px;}
+  .recompensas { background: url('../img/cuartel/dashmenu/recompensas_icon.png') no-repeat 8px 4px; }
+  .mundo {background: url('../img/cuartel/dashmenu/world_warriors_icon.png') no-repeat 10px 7px;}
+  .mapa {background: url('../img/cuartel/dashmenu/light_map_icon.png') no-repeat 3px 10px;}
+  .config { background: url('../img/cuartel/dashmenu/configuration_icon.png') no-repeat 9px 1px; } 
+
+  .selected .cuartel {background-image: url('../img/cuartel/dashmenu/cuartel_icon_selected.png');}
+  .selected .perfil {background-image: url('../img/cuartel/dashmenu/perfil_icon_selected.png');}
+  .selected .guerreros {background-image: url('../img/cuartel/dashmenu/guerreros_icon_selected.png');}
+  .selected .recompensas { background: url('../img/cuartel/dashmenu/recompensas_icon_selected.png') no-repeat 8px 6px; font-size: 13px!important; }
+  .selected .mundo {background-image: url('../img/cuartel/dashmenu/world_warriors_icon_selected.png');}
+  .selected .mapa {background-image: url('../img/cuartel/dashmenu/light_map_icon_selected.png');}
+  .selected .config { background-image: url('../img/cuartel/dashmenu/configuration_icon_selected.png'); }
+
+.feed {
+  float: left;
+  margin: 15px 25px;
+  width: 475px;
+}
+.feed ul {
+	font-size: 10px;
+	list-style: none;
+	padding: 0;
+	}
+	.feed li { position: relative }
+	.feed li img {
+		float: left;
+		margin: 5px 20px 10px 10px;
+	}
+	.feed h3 {
+		color: #8cfe0a;
+		font-size: 12px;
+		font-weight: normal;
+		margin: 0 0 5px 0;
+	}
+	.feed dt { font-weight: bold; }
+	.feed .loading {
+    	color: #ccc;
+    	display: none;
+    	margin: 20px auto;
+    }
+
+
+
+#post_box {
+  background: url('../img/cuartel/bg_postbox.png') no-repeat top center;
+  margin: 0px 0px 20px 0px;
+  padding: 15px;
+  width: 441px;
+  height: 219px;
+}
+  #post_box h2 {
+  	border: none;
+    font: bold 18px "proxima-nova", "Trebuchet MS", sans-serif;
+    margin:0;
+  }
+  #post_box textarea {
+    width: 99%;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 5px;
+    resize: none;
+  }
+  #post_box textarea:focus {
+    box-shadow: 0 0 5px 2px rgba(255,255,255,0.75);
+  }
+  #post_box select#predefined_message {
+  	font-size: 16px;
+  	display: block;
+  	margin: 0px 0px 15px 0px;
+	width: 440px;
+	border: 1px solid #CCC;
+  }
+  #post_box p#share_on { margin: 5px 0px 0px 0px }
+  #post_box p#share_on span { margin: 0px 0px 0px 10px; color: #00cc00; }
+  #post_box input[type=image] {
+    float: right;
+    margin-top: 15px;
+  }
+  #post_box input[type=image]#cuartel_post_message { margin-top: 0px; }
+
+  #post_box #maxCharacters{
+	float: left;
+	margin-left: 265px;
+	margin-top: 10px;
+	font-size: 15px;
+  }
+
+.box {
+	 position: relative;
+	 background: url('../img/cuartel/bg_messagebox_top.png') no-repeat top center;
+	 padding-top: 12px;
+	 margin: 0 0 20px;
+}
+
+.box a#delete_item {
+	display: block;
+	position: absolute;
+	top: 11px;
+	left: 449px;
+	width: 24px;
+	height: 23px;
+	text-indent: -99999px;
+	background: transparent url(../img/delete_icon.jpg) no-repeat;
+}
+.single.box.new {
+	display: none;
+}
+
+.box_content {
+	 background: #000 url('../img/cuartel/bg_messagebox.png') no-repeat top center;
+	 min-height: 80px;
+	 padding: 0 15px;
+}
+.box_btm {
+  	background: url('../img/cuartel/bg_messagebox_btm.png') no-repeat bottom left;
+ 	height: 15px;
+}
+.box img.user_pic { float: left; margin: 0px 20px 0px 20px; }
+.box img { width: 69px; height: 74px; }
+.message span {
+  	color: #00cc00;
+  	display: block;
+  	margin: 0px 0px 5px 0px;
+	padding: 2px 0px 0px 0px;
+}
+.message strong {
+  	color: #FFF;
+}
+.message p {
+  	margin: 0;
+}
+.message span strong a { text-decoration: none; }
+.message span strong a:hover { text-decoration: underline; }
+
+/* ==| The Lightbox
+ * ========================================================================== */
+.guerreros_lightbox {
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 1001;
+	opacity: 0.8;
+	filter: Alpha(opacity=80);
+	margin: 0px;
+	padding: 0px;
+}
+#lightbox_test { text-align: center; display: block; }
+#close_lightbox,
+.close_lightbox {
+	position: absolute;
+	top: -15px;
+	left: 520px;
+	display: none;
+	text-indent: -99999px;
+	width: 43px;
+	height: 43px;
+	background: transparent url(../img/cuartel/recompensas/close_lightbox_btn.png) no-repeat;
+	z-index: 1002;
+}
+.close_lightbox {
+	display: block;
+}
+#recompensa_box,
+.rank_box {
+	position: absolute;
+	display: none;
+	padding: 40px;
+	top: 50%;
+	left: 50%;
+	width: 470px;
+	height: 350px;
+	background: transparent url(../img/cuartel/recompensas/box_info_bg.png) no-repeat;
+	z-index: 1002;
+	margin: -175px 0 0 -235px;
+}
+#recompensa_box h3,
+.rank_box h3 {
+	color: #FFF;
+	font-size: 20px;
+	text-align: center; 
+	margin: 20px 0px 30px 0px;
+	text-shadow: 1px 1px 2px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1); 
+}
+#recompensa_box span,
+.rank_box span {
+	width: 152px;
+	height: 145px;
+	display: block;
+	float: left; 
+	margin: 0px 20px 0px 0px;
+	text-indent: -9999em;
+}
+.rank_box span {
+	width: 124px;
+	height: 117px;
+	margin-left: 10px;
+}
+
+#recompensa_box span.super { background: transparent url(../img/cuartel/recompensas/reward_super.png) no-repeat; }
+#recompensa_box span.gue { background: transparent url(../img/cuartel/recompensas/reward_gue.png) no-repeat; }
+#recompensa_box span.reclu { background: transparent url(../img/cuartel/recompensas/reward_reclu.png) no-repeat; }
+#recompensa_box span.pens { background: transparent url(../img/cuartel/recompensas/reward_pens.png) no-repeat; }
+#recompensa_box span.amigo { background: transparent url(../img/cuartel/recompensas/reward_amigo.png) no-repeat; }
+#recompensa_box span.foto { background: transparent url(../img/cuartel/recompensas/reward_foto.png) no-repeat; }
+#recompensa_box span.soc { background: transparent url(../img/cuartel/recompensas/reward_soc.png) no-repeat; }
+
+.rank_box span.honor.recruit      { background: transparent url(../img/cuartel/ranks/honor/recruit_big.png)      no-repeat; }
+.rank_box span.honor.soldier      { background: transparent url(../img/cuartel/ranks/honor/soldier_big.png)      no-repeat; }
+.rank_box span.honor.sergeant     { background: transparent url(../img/cuartel/ranks/honor/sergeant_big.png)     no-repeat; }
+.rank_box span.honor.lieutenant   { background: transparent url(../img/cuartel/ranks/honor/lieutenant_big.png)   no-repeat; }
+.rank_box span.honor.captain      { background: transparent url(../img/cuartel/ranks/honor/captain_big.png)      no-repeat; }
+.rank_box span.honor.major        { background: transparent url(../img/cuartel/ranks/honor/major_big.png)        no-repeat; }
+.rank_box span.honor.coronel      { background: transparent url(../img/cuartel/ranks/honor/coronel_big.png)      no-repeat; }
+.rank_box span.honor.general      { background: transparent url(../img/cuartel/ranks/honor/general_big.png)      no-repeat; }
+.rank_box span.honor.lightwarrior { background: transparent url(../img/cuartel/ranks/honor/lightwarrior_big.png) no-repeat; }
+
+.rank_box span.justice.recruit      { background: transparent url(../img/cuartel/ranks/justice/recruit_big.png)      no-repeat; }
+.rank_box span.justice.soldier      { background: transparent url(../img/cuartel/ranks/justice/soldier_big.png)      no-repeat; }
+.rank_box span.justice.sergeant     { background: transparent url(../img/cuartel/ranks/justice/sergeant_big.png)     no-repeat; }
+.rank_box span.justice.lieutenant   { background: transparent url(../img/cuartel/ranks/justice/lieutenant_big.png)   no-repeat; }
+.rank_box span.justice.captain      { background: transparent url(../img/cuartel/ranks/justice/captain_big.png)      no-repeat; }
+.rank_box span.justice.major        { background: transparent url(../img/cuartel/ranks/justice/major_big.png)        no-repeat; }
+.rank_box span.justice.coronel      { background: transparent url(../img/cuartel/ranks/justice/coronel_big.png)      no-repeat; }
+.rank_box span.justice.general      { background: transparent url(../img/cuartel/ranks/justice/general_big.png)      no-repeat; }
+.rank_box span.justice.lightwarrior { background: transparent url(../img/cuartel/ranks/justice/lightwarrior_big.png) no-repeat; }
+
+.rank_box span.peace.recruit      { background: transparent url(../img/cuartel/ranks/peace/recruit_big.png)      no-repeat; }
+.rank_box span.peace.soldier      { background: transparent url(../img/cuartel/ranks/peace/soldier_big.png)      no-repeat; }
+.rank_box span.peace.sergeant     { background: transparent url(../img/cuartel/ranks/peace/sergeant_big.png)     no-repeat; }
+.rank_box span.peace.lieutenant   { background: transparent url(../img/cuartel/ranks/peace/lieutenant_big.png)   no-repeat; }
+.rank_box span.peace.captain      { background: transparent url(../img/cuartel/ranks/peace/captain_big.png)      no-repeat; }
+.rank_box span.peace.major        { background: transparent url(../img/cuartel/ranks/peace/major_big.png)        no-repeat; }
+.rank_box span.peace.coronel      { background: transparent url(../img/cuartel/ranks/peace/coronel_big.png)      no-repeat; }
+.rank_box span.peace.general      { background: transparent url(../img/cuartel/ranks/peace/general_big.png)      no-repeat; }
+.rank_box span.peace.lightwarrior { background: transparent url(../img/cuartel/ranks/peace/lightwarrior_big.png) no-repeat; }
+
+.rank_box span.brave.recruit      { background: transparent url(../img/cuartel/ranks/brave/recruit_big.png)      no-repeat; }
+.rank_box span.brave.soldier      { background: transparent url(../img/cuartel/ranks/brave/soldier_big.png)      no-repeat; }
+.rank_box span.brave.sergeant     { background: transparent url(../img/cuartel/ranks/brave/sergeant_big.png)     no-repeat; }
+.rank_box span.brave.lieutenant   { background: transparent url(../img/cuartel/ranks/brave/lieutenant_big.png)   no-repeat; }
+.rank_box span.brave.captain      { background: transparent url(../img/cuartel/ranks/brave/captain_big.png)      no-repeat; }
+.rank_box span.brave.major        { background: transparent url(../img/cuartel/ranks/brave/major_big.png)        no-repeat; }
+.rank_box span.brave.coronel      { background: transparent url(../img/cuartel/ranks/brave/coronel_big.png)      no-repeat; }
+.rank_box span.brave.general      { background: transparent url(../img/cuartel/ranks/brave/general_big.png)      no-repeat; }
+.rank_box span.brave.lightwarrior { background: transparent url(../img/cuartel/ranks/brave/lightwarrior_big.png) no-repeat; }
+
+#recompensa_box h4,
+.rank_box h4 {  
+	font-size: 16px; 
+	text-transform: uppercase; 
+	margin: 0px 0px 6px 0px; 
+	color: #FFF;
+	text-shadow: 1px 1px 2px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1); 
+}
+#recompensa_box p,
+.rank_box p { 
+	font-size: 11px; 
+	margin: 0px 0px 0px 0px; 
+	text-shadow: 1px 1px 4px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1); 
+}
+
+#gt_lightbox_cta,
+.rank_lightbox_cta,
+.next_lightbox_cta {
+	text-align: center;
+	margin: 60px auto 0px auto;
+	width: 239px;
+	height: 49px;
+	display: block;
+	text-indent: -99999px;
+	background: transparent url(../img/gt_lightbox_cta.png) no-repeat;
+}
+.rank_lightbox_cta {
+	background-image: url(../img/rank_lightbox_cta.png);
+}
+.next_lightbox_cta {
+	background-image: url(../img/next_lightbox_cta.png);
+}
+ 
+
+/* ==| Notifications View
+ * ========================================================================== */
+#cuartel_notifications {}
+#cuartel_notifications .message p {
+	font-size: 11px;
+	font-weight: lighter;
+	color: #e6e6e6;
+}
+#cuartel_notifications .box_content { padding: 10px 15px 5px 15px; }
+#cuartel_notifications .box img.user_pic {
+	margin: 10px 20px 0px 20px;
+	width: 35px;
+	height: 35px;
+}
+#cuartel_notifications .message img.fb_pic {
+	width: 30px;
+	height: 30px;
+	margin: 10px 0px;
+}
+#cuartel_notifications .message span.not_date {
+	font-size: 10px;
+	font-weight: lighter;
+	color: #e6e6e6;
+}
+#cuartel_notifications .message .green_btn:link,
+#cuartel_notifications .message .green_btn:visited {
+	display: block;
+	float: right;
+	margin: 20px 0px;
+	text-decoration: none;
+}
+#cuartel_notifications .message .loading {
+	float: right;
+	margin: 20px 30px 0 0;
+}
+#cuartel_notifications .message .feedback {
+	text-align: center;
+	color: #ccc;
+	float: right;
+	width: 65px;
+	margin: 15px 0;
+	display: none;
+}
+
+/* Badges */
+#cuartel_notifications .message span.badge_wheel {
+	width: 55px;
+	height: 55px;
+	display: block;
+	float: right;
+	margin: 0px 0px 0px 10px;
+}
+#cuartel_notifications .message span.badge_wheel.honor {} /* must create bg images for all the wheels */
+	#cuartel_notifications .message span.badge_wheel.honor.recruit { background: url('../img/cuartel/ranks/honor/recruit.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.honor.soldier { background: url('../img/cuartel/ranks/honor/soldier.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.honor.sergeant { background: url('../img/cuartel/ranks/honor/sergeant.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.honor.lieutenant { background: url('../img/cuartel/ranks/honor/lieutenant.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.honor.captain { background: url('../img/cuartel/ranks/honor/captain.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.honor.major { background: url('../img/cuartel/ranks/honor/major.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.honor.coronel { background: url('../img/cuartel/ranks/honor/coronel.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.honor.general { background: url('../img/cuartel/ranks/honor/general.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.honor.lightwarrior { background: url('../img/cuartel/ranks/honor/lightwarrior.png') no-repeat; }
+	
+#cuartel_notifications .message span.badge_wheel.justice {}
+	#cuartel_notifications .message span.badge_wheel.justice.recruit { background: url('../img/cuartel/ranks/justice/recruit.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.justice.soldier { background: url('../img/cuartel/ranks/justice/soldier.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.justice.sergeant { background: url('../img/cuartel/ranks/justice/sergeant.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.justice.lieutenant { background: url('../img/cuartel/ranks/justice/lieutenant.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.justice.captain { background: url('../img/cuartel/ranks/justice/captain.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.justice.major { background: url('../img/cuartel/ranks/justice/major.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.justice.coronel { background: url('../img/cuartel/ranks/justice/coronel.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.justice.general { background: url('../img/cuartel/ranks/justice/general.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.justice.lightwarrior { background: url('../img/cuartel/ranks/justice/lightwarrior.png') no-repeat; }
+	
+#cuartel_notifications .message span.badge_wheel.peace {}
+	#cuartel_notifications .message span.badge_wheel.peace.recruit { background: url('../img/cuartel/ranks/peace/recruit.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.peace.soldier { background: url('../img/cuartel/ranks/peace/soldier.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.peace.sergeant { background: url('../img/cuartel/ranks/peace/sergeant.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.peace.lieutenant { background: url('../img/cuartel/ranks/peace/lieutenant.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.peace.captain { background: url('../img/cuartel/ranks/peace/captain.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.peace.major { background: url('../img/cuartel/ranks/peace/major.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.peace.coronel { background: url('../img/cuartel/ranks/peace/coronel.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.peace.general { background: url('../img/cuartel/ranks/peace/general.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.peace.lightwarrior { background: url('../img/cuartel/ranks/peace/lightwarrior.png') no-repeat; }
+
+#cuartel_notifications .message span.badge_wheel.brave {}
+	#cuartel_notifications .message span.badge_wheel.brave.recruit { background: url('../img/cuartel/ranks/brave/recruit.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.brave.soldier { background: url('../img/cuartel/ranks/brave/soldier.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.brave.sergeant { background: url('../img/cuartel/ranks/brave/sergeant.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.brave.lieutenant { background: url('../img/cuartel/ranks/brave/lieutenant.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.brave.captain { background: url('../img/cuartel/ranks/brave/captain.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.brave.major { background: url('../img/cuartel/ranks/brave/major.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.brave.coronel { background: url('../img/cuartel/ranks/brave/coronel.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.brave.general { background: url('../img/cuartel/ranks/brave/general.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.brave.lightwarrior { background: url('../img/cuartel/ranks/brave/lightwarrior.png') no-repeat; }
+
+#cuartel_notifications .message span.badge_wheel.rm {}
+	#cuartel_notifications .message span.badge_wheel.rm.lightwarrior { background: url('../img/cuartel/ranks/rm/lightwarrior.png') no-repeat; }
+
+/* must create bg images for all the rewards */
+#cuartel_notifications .message span.badge_wheel.reward {}
+	#cuartel_notifications .message span.badge_wheel.reward.gue { background: url('../img/cuartel/recompensas/dedicado.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.reward.foto { background: url('../img/cuartel/recompensas/fotogenico.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.reward.pens { background: url('../img/cuartel/recompensas/pensador.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.reward.amigo { background: url('../img/cuartel/recompensas/mejor_amigo.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.reward.reclu { background: url('../img/cuartel/recompensas/reclutador.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.reward.soc { background: url('../img/cuartel/recompensas/sociable.png') no-repeat; }
+	#cuartel_notifications .message span.badge_wheel.reward.super { background: url('../img/cuartel/recompensas/super.png') no-repeat; }
+
+#cuartel_notifications .message span.faction_shield {
+	width: 55px;
+	height: 82px;
+	display: block;
+	float: right;
+	margin: 0px 0px 0px 10px;
+}
+/* must create bg images for all the factions fields */
+#cuartel_notifications .message span.faction_shield.brave   { background: url('../img/cuartel/shields/brave.png') no-repeat; }
+#cuartel_notifications .message span.faction_shield.honor   { background: url('../img/cuartel/shields/honor.png') no-repeat; }
+#cuartel_notifications .message span.faction_shield.justice { background: url('../img/cuartel/shields/justice.png') no-repeat; }
+#cuartel_notifications .message span.faction_shield.peace   { background: url('../img/cuartel/shields/peace.png') no-repeat; }
+
+/* ==| Recompensas View
+ * ========================================================================== */
+#recompensas_section {
+	float: left;
+	margin: 15px 0px 0px 25px;
+	width: 730px;
+	position: relative;
+}
+#all_rewards li {
+	float: left;
+	margin: 0px 38px 0px 0px;
+	cursor: pointer;
+}
+#all_rewards li.right_side { margin: 0px 0px 0px 0px; }
+#all_rewards li h3 {
+	text-align: center;
+	color: #9F0;
+}
+#rewards_popup {
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 353px;
+	height: 169px;
+	cursor: pointer;
+	background: url('../img/cuartel/rewards_tip_bg.png') no-repeat;
+}
+#rewards_popup img { float: left; margin: 30px 20px 0px 30px; width: 98px; height: 98px; }
+#rewards_popup #reward_message { width: 350px; margin: 30px 0px 0px 0px; }
+#reward_message h4 { margin: 0px 0px 10px 0px; }
+#reward_message p { margin: 0px 19px 0px 0px; font-size: 11px; line-height: 13px; }
+
+
+/* ==| Mis Rangos View
+ * ========================================================================== */
+#misrangos_section {}
+#misrangos_section .box img { float: left; margin: 11px 15px 20px 10px; width: 55px; height: 55px; }
+#misrangos_section .box_content { padding: 10px 15px 0px 15px; }
+#misrangos_section .box span { color: #FFF; margin: 0px 0px 0px 0px; color: #1eff00; font-family: proxima-nova, Verdana, sans-serif; font-size: 13px; }
+#current_rank {
+	width: 477px;
+	height: 159px;
+	display: block;
+	margin: 0px 0px 20px 0px;
+	background: url(../img/cuartel/ranks/main_rank_bg.png) no-repeat;
+}
+#current_rank img {
+	float: left;
+	margin: 20px 20px 0px 20px;
+	width: 117px;
+}
+#current_rank_details { padding: 18px 0px 0px 0px; width: 400px; }
+#current_rank_details p { margin: 0px 0px 0px 0px; }
+#current_rank_details span { font-size: 18px; color: #1eff00; font-family: proxima-nova, Verdana, sans-serif; font-weight: bold; }
+#future_rank {
+	display: block;
+	width: 452px;
+	font-size: 11px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 12px;
+	background: url(../img/cuartel/ranks/future_rank_bg_middle.png) repeat-y;
+}
+#future_rank_top {
+	display: block;
+	width: 479px;
+	height: 20px;
+	background: url(../img/cuartel/ranks/future_rank_bg.png) no-repeat top center;
+}
+#future_rank_bottom {
+	display: block;
+	width: 479px;
+	height: 20px;
+	margin: 0px 0px 20px 0px;
+	background: url(../img/cuartel/ranks/future_rank_bg.png) no-repeat bottom center;
+}
+#future_rank_details { 
+	margin: 0px 0px 7px 0px;
+	border-bottom: solid 1px #25AD00; 
+	padding: 0px 0px 13px 0px; 
+}
+#future_rank p, #future_rank_details p { margin: 0px 0px 0px 0px; }
+#future_rank_details img { float: left; margin: 0px 8px 20px 6px; }
+#future_rank_details span { margin: 0px 0px -1px 0px; display: block; color: #1eff00; font-family: proxima-nova, Verdana, sans-serif; font-size: 16px; font-weight: bold; }
+#rank_progress {
+	display: block;
+	width: 440px;
+	border: solid 1px #25AD00;
+	margin: 7px 0px 0px 0px;
+	height: 20px;
+}
+#progress_bar {
+	width: 0%;
+	height: inherit;
+	background: #00ca00;
+}
+ 
+ /* ==| Reclutamiento View
+ * ========================================================================== */
+#reclutamiento_section {
+	float: left;
+	margin: 15px 0px 0px 25px;
+	width: 730px;
+}
+#reclutamiento_overview { overflow: hidden; }
+#reclutamiento_overview #social_btns {
+	border-radius: 8px 8px 8px 8px;
+	border: solid 1px #00ff33;
+	display: block;
+	width: 330px;
+	float: left;
+	margin: 0px 40px 0px 0px;
+	background: #005919;
+	background: -moz-linear-gradient(top,  #005919 0%, #000000 82%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#005919), color-stop(82%,#000000));
+	background: -webkit-linear-gradient(top,  #005919 0%,#000000 82%);
+	background: -o-linear-gradient(top,  #005919 0%,#000000 82%);
+	background: -ms-linear-gradient(top,  #005919 0%,#000000 82%);
+	background: linear-gradient(top,  #005919 0%,#000000 82%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005919', endColorstr='#000000',GradientType=0 );
+}
+#reclutamiento_overview #social_btns img { margin: 0px 20px 0px 0px; }
+#reclutamiento_overview #social_btns img:last-child { margin: 0px 0px 0px 0px; }
+#reclutamiento_overview #social_btns a {
+	text-indent: -99999px;
+	float: left;
+	display: block;
+	margin: 0px 0px 0px 0px;
+	width: 101px;
+	height: 99px;
+}
+#reclutamiento_overview #social_btns a#fb_btn { background: url('../img/cuartel/reclutamiento_fb_btn.png') no-repeat; }
+#reclutamiento_overview #social_btns a#twitter_btn { background: url('../img/cuartel/reclutamiento_twitter_btn.png') no-repeat; }
+#reclutamiento_overview #social_btns a#contact_btn { background: url('../img/cuartel/reclutamiento_contact_btn.png') no-repeat; width: 117px; height: 92px; }
+#reclutamiento_overview #social_btns a#fb_btn.btn_selected { background: url('../img/cuartel/reclutamiento_fb_btn_over.png') no-repeat; }
+#reclutamiento_overview #social_btns a#twitter_btn.btn_selected { background: url('../img/cuartel/reclutamiento_twitter_btn_over.png') no-repeat; }
+#reclutamiento_overview #social_btns a#contact_btn.btn_selected { background: url('../img/cuartel/reclutamiento_contact_btn_over.png') no-repeat; }
+#reclutamiento_overview p { color: #777; padding: 0px 0px 0px 0px; }
+#recomended_warriors {}
+#recomended_warriors li { 
+	position: relative;
+	width: 230px;
+	min-height: 100px;
+	float: left;
+	margin: 0px 20px 0px 0px;
+	padding: 0px 0px 30px 0px;
+	font-size: 11px;
+}
+#recomended_warriors li.right_side { margin: 0px 0px 0px 0px; }
+#recomended_warriors li img { float: left; margin: 0px 15px 0px 0px; width: 69px; height: 74px; }
+#recomended_warriors li h4 { margin: 0px 0px 5px 0px; color: #99ff00; }
+#recomended_warriors li p { margin: 0px 0px 0px 0px; }
+#recomended_warriors li p span { font-weight: bold; }
+#recomended_warriors li span.badge_circle {
+	position: absolute;
+	width: 36px;
+	height: 34px;
+	top: 57px;
+	left: 49px;
+}
+/* must create bg images for all the circles  */
+#recomended_warriors li span.badge_circle.honor {}
+	#recomended_warriors li span.badge_circle.honor.recruit { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.honor.soldier { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.honor.sergeant { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.honor.lieutenant { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.honor.captain { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.honor.major { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.honor.coronel { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.honor.general { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.honor.lightwarrior { background: url('../img/cuartel/ranks/honor/recruit_small.png') no-repeat; }
+
+#recomended_warriors li span.badge_circle.justice {}	
+	#recomended_warriors li span.badge_circle.justice.recruit { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.justice.soldier { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.justice.sergeant { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.justice.lieutenant { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.justice.captain { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.justice.major { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.justice.coronel { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.justice.general { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.justice.lightwarrior { background: url('../img/cuartel/ranks/justice/recruit_small.png') no-repeat; }
+
+#recomended_warriors li span.badge_circle.peace {}
+	#recomended_warriors li span.badge_circle.peace.recruit { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.peace.soldier { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.peace.sergeant { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.peace.lieutenant { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.peace.captain { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.peace.major { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.peace.coronel { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.peace.general { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.peace.lightwarrior { background: url('../img/cuartel/ranks/peace/recruit_small.png') no-repeat; }
+
+#recomended_warriors li span.badge_circle.brave {}
+	#recomended_warriors li span.badge_circle.brave.recruit { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.brave.soldier { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.brave.sergeant { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.brave.lieutenant { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.brave.captain { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.brave.major { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.brave.coronel { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.brave.general { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+	#recomended_warriors li span.badge_circle.brave.lightwarrior { background: url('../img/cuartel/ranks/brave/recruit_small.png') no-repeat; }
+
+#recomended_warriors li span.badge_circle.rm {}
+	#recomended_warriors li span.badge_circle.rm.lightwarrior { background: url('../img/cuartel/ranks/rm/lightwarrior_small.png') no-repeat; }
+	
+#recomended_warriors li a.green_btn {
+	float: right;
+	text-decoration: none;
+	text-align: center;
+	font-size: 10px;
+	margin: 15px 0px 0px 0px;
+	width: 125px;
+	padding: 5px 5px 5px 5px;
+}
+#recomended_warriors .loading {
+	position: absolute;
+	bottom: 55px;
+	left: 130px;
+}
+#facebook_warriors {}
+#facebook_warriors li, #twitter_warriors li {
+	width: 220px;
+	float: left;
+	margin: 0px 33px 0px 0px;
+	padding: 0px 0px 30px 0px;
+}
+#twitter_warriors li {
+	width: 223px;
+	margin-right: 30px;
+}
+
+#twitter_warriors .loading{
+	margin-left: 138px;
+}
+
+#facebook_warriors li.right_side, #twitter_warriors li.right_side { margin: 0px 0px 0px 0px; }
+#facebook_warriors li img, #twitter_warriors li img { float: left; margin: 0px 15px 0px 0px; width: 69px; height: 74px; }
+#twitter_warriors li img {
+width: 73px; height: 73px;
+}
+#facebook_warriors li h4, #twitter_warriors li h4 { 
+	margin: 0px 0px 12px 0px;
+	color: #9F0;
+	font-size: 11px;
+	font-weight: normal;
+}
+#facebook_warriors li a, #twitter_warriors li a { 
+	font-size: 10px;
+	text-align: center;
+	text-decoration: none;
+	float: right;
+	margin: 0px 2px 0px 0px;
+}
+#send_message { width: 380px; float: left; }
+#send_message form textarea {
+	display: block;
+	width: 345px;
+	height: 250px;
+	resize: vertical;	
+	padding: 20px;
+	margin: 10px 0px 20px 0px;
+	border-radius: 10px 10px 10px 10px;
+	border: solid 1px #FFF;
+}
+#send_message form input {
+	float: right;
+}
+#send_message fieldset {
+	margin: 10px 0;
+}
+	#send_message fieldset input {
+		width: 300px;
+		padding: 5px;
+		border-radius: 5px;
+		border: solid 1px white;
+	}
+#search_email { float: right; }
+#search_email input#friend_email { 
+	border-radius: 5px;
+	border: solid 1px #FFF;
+	width: 260px;
+	padding: 5px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+}
+#search_email #email_list { /* Double ID selector for overriding other rule */
+	background: #007f1b; /* Old browsers */
+	background: -moz-linear-gradient(top,  #007f1b 0%, #020706 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#007f1b), color-stop(100%,#020706)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #007f1b 0%,#020706 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #007f1b 0%,#020706 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #007f1b 0%,#020706 100%); /* IE10+ */
+	background: linear-gradient(top,  #007f1b 0%,#020706 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007f1b', endColorstr='#020706',GradientType=0 ); /* IE6-9 */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: solid 1px #00ff33;
+	padding: 12px 20px;
+	min-height: 70px;
+	display: none;
+}
+	#search_email #email_list li {
+		margin: 5px 0;
+	}
+	#search_email #email_list span.remove_email{
+		background: url('../img/cuartel/icon_delete_email.png') no-repeat;
+		float:right;
+		width: 15px;
+		display: block;
+		height: 15px;
+		cursor: pointer;
+	}
+	
+#twitter_warriors {}
+#guerreros_de_facebook { display: none; }
+#guerreros_de_twitter { display: none; }
+#invitar_via_email { display: none; }
+
+/* Arrows to navigate thumbs */
+#thumbs_nav { float: right; margin: -55px 0px 0px 0px; text-indent: -99999px; width: 60px; }
+#thumbs_nav a { width: 30px; height: 30px; text-indent: -99999px; display: block; float: left; }
+#thumbs_nav a#on_next { background: url('../img/next_btn.png') no-repeat; }
+#thumbs_nav a#on_prev { background: url('../img/prev_btn.png') no-repeat; }
+
+
+/* ==| Configuracion View
+ * ========================================================================== */
+#configuracion_section {
+	float: left;
+	margin: 15px 0px 0px 25px;
+	width: 730px;
+}
+#configuration_nav {
+	float: right;
+	margin: -46px 0px 0px 0px;
+}
+#configuration_nav a {
+	padding: 10px 20px 10px 20px;
+	color: #99ff00;
+	text-decoration: none;
+	margin: 0px 0px 0px 10px;
+}
+#configuration_nav a.nav_selected { 
+	border-radius: 10px 10px 0px 0px;
+	color: #000;
+	background: #99ff00;
+}
+
+/* The Configuration Divs: Avatar */
+#avatar_configuration { margin: 25px 0px 0px 0px; }
+#avatar_configuration h4 { margin: 0px 0px 0px 0px; }
+#avatar_configuration p { color: #777; }
+#avatar_configuration input.submit_avatar { float: right; }
+#avatar_configuration input[type=file] {
+	color: #fff;
+}
+#select_avatar { width: 382px; float: left; margin: 0px 40px 0px 0px; }
+form#update_avatar input[type='text'] {
+	border-radius: 5px 5px 5px 5px;
+	margin: 0px 10px 0px 0px;
+	width: 160px;
+	height: 16px;
+}
+form#update_avatar input[type='file'] { width: 200px; }
+#sample_avatars { width: 350px; }
+#sample_avatars img { 
+	margin: 0px 15px 15px 0px; 
+	width: 75px;
+	cursor: pointer;
+	border: 2px solid #656565;
+}
+#sample_avatars img.selected{
+	border: 2px solid #8CFE0A;
+}
+#user_avatar{ 	border: 5px solid #656565;}
+#select_predefined_avatar a, #select_predefined_avatar .feedback {
+	display: block;
+	text-decoration: none;
+	color: #777;
+	background: url(../img/eliminate_btn.png) no-repeat -3px -4px;
+	width: 300px;
+	float: right;
+	text-indent: 25px;
+	height: 30px;
+	margin: 10px 0px 0px 0px;
+}
+	
+#select_predefined_avatar .feedback {
+	text-indent: 0;
+	color: #fff;
+	background: transparent;
+	display: none;
+}
+
+/* The Configuration Divs: Perfil */
+#perfil_configuration { display: none; }
+#perfil_configuration input[type='image'] { float: right; }
+#perfil_configuration div.green_line { margin: 40px 0px 0px 0px; }
+ul#configuration_data { margin: 30px 0px 0px 0px; font-size: 12px; overflow: hidden; }
+ul#configuration_data li {
+	display: block;
+	margin: 0px 0px 30px 0px;
+}
+ul#configuration_data li label { width: 150px; float: left; margin: 6px 0px 0px 0px; }
+ul#configuration_data li select { font-size: 16px; width: 175px; }
+ul#configuration_data li span { display: block; margin: 10px 0px 0px 150px; }
+ul#configuration_data li span input[type='checkbox'] { margin: 0px 6px 0px 0px; }
+ul#configuration_data li img { margin: 0px 10px 0px 0px; }
+ul#configuration_data li input[type='text'] {
+	border-radius: 5px 5px 5px 5px;
+	width: 300px;
+	height: 15px;
+	padding: 5px 5px 5px 5px;
+}
+
+/* The Configuration Divs: Location */
+#location_configuration { display: none; }
+#location_configuration label { margin: 0px 20px 0px 0px; }
+#location_configuration input[type='text'] { border-radius: 6px 6px 6px 6px; margin: 0px 15px 0px 0px; padding: 5px; }
+#location_configuration input#country_search { width: 300px; }
+#location_configuration input[type='image'] { float: right; }
+#location_configuration #map_canvas { margin: 20px 0px 20px 0px; width: 708px; height: 390px; background: #000; top: 0px; overflow: hidden; }
+
+
+/* The Configuration Divs: Datos */
+
+#datos_configuration {display: none;}
+
+#datos_configuration input.submit_avatar { float: right; }
+
+.ui-autocomplete {width:313px; }
+
+/* ==| User Search
+ * ========================================================================== */
+#top_warriors {}
+	#top_warriors a:link, #top_warriors a:visited {
+		color: #8CFE0A;
+		text-decoration: none;
+	}
+	#top_warriors a:hover {
+		text-decoration: underline;
+	}
+	#top_warriors dl { margin: 5px 0 0 }
+	#top_warriors dt { font-weight: bold }
+	#top_warriors dd { margin: 0 }
+	#top_warriors .box_content {
+		padding: 10px 0 0 40px;
+	}
+	#top_warriors .user_pic {
+		margin-top: 0;
+	}
+	.ranking {
+		position: absolute;
+		top: 28px;
+		left: 18px;
+		font-size: 24px;
+	}
+	#top_warriors h3,
+	#top_warriors dl {
+		margin-left: 117px;
+		width: 145px;
+	}
+	.guerrero_stats {
+		position: absolute;
+		right: 100px;
+		top: 15px;
+		text-align: center;
+	}
+		.guerrero_stats span {
+			margin: 5px 0;
+			display: block;
+		}
+		.guerrero_stats strong {
+			font-family: proxima-nova, Verdana, sans-serif;
+			color: #8cfe0a;
+			display: block;
+			font-size: 28px;
+			font-weight: 500;
+			line-height: 1;
+		}
+	#top_warriors span.badge_image {
+		position: absolute;
+		width: 55px;
+		height: 55px;
+		top: 36px;
+		left: 397px;
+	}
+	#top_warriors span.honor { background: url('../img/cuartel/emblems/honor.png') no-repeat; }
+	#top_warriors span.justice { background: url('../img/cuartel/emblems/justice.png') no-repeat; }
+	#top_warriors span.brave { background: url('../img/cuartel/emblems/brave.png') no-repeat; }
+	#top_warriors span.peace { background: url('../img/cuartel/emblems/peace.png') no-repeat; }
+	#top_warriors span.rm { background: url('../img/cuartel/emblems/rm.png') no-repeat; }
+	
+#pagination li {
+	display: inline;
+	margin-left: 5px;
+	font-size: 12px;
+}
+
+/* ==| Pending Invitations
+ * ========================================================================== */
+
+#pending_invs {}
+	#pending_invs dl { margin: 0; }
+	#pending_invs dt {
+		float: left;
+		margin-right: 5px;
+	}
+
+#pending_invs .actions {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	width: 80px;
+}
+	#pending_invs .accept, #pending_invs .ignore, #pending_invs .success {
+		display: block;
+	}
+	#pending_invs .ignore {
+		background: #FF0000;
+		border-color: #000;
+		margin-top: 10px;
+	}
+	#pending_invs .success, #side_pending_invs .success {
+		color: gray;
+	}
+.ajax_loader {
+	display: none;
+}
+
+/* ==| My Warriors
+ * ========================================================================== */
+
+#my_warriors {}
+
+	#my_warriors li {
+		position: relative;
+		float: left;
+		margin-bottom: 25px;
+		width: 235px;
+	}
+	#my_warriors a:link, #my_warriors a:visited {
+		color: #8CFE0A;
+		text-decoration: none;
+	}
+	#my_warriors a:hover {
+		text-decoration: underline;
+	}
+	#my_warriors span.badge_circle {
+		position: absolute;
+		width: 55px;
+		height: 55px;
+		top: 42px;
+		left: 36px;
+	}
+	/* must create bg images for all the circles */
+	#my_warriors span.badge_circle.honor {}
+		#my_warriors span.badge_circle.honor.recruit { background: url('../img/cuartel/ranks/honor/recruit.png') no-repeat; }
+		#my_warriors span.badge_circle.honor.soldier { background: url('../img/cuartel/ranks/honor/soldier.png') no-repeat; }
+		#my_warriors span.badge_circle.honor.sergeant { background: url('../img/cuartel/ranks/honor/sergeant.png') no-repeat; }
+		#my_warriors span.badge_circle.honor.lieutenant { background: url('../img/cuartel/ranks/honor/lieutenant.png') no-repeat; }
+		#my_warriors span.badge_circle.honor.captain { background: url('../img/cuartel/ranks/honor/captain.png') no-repeat; }
+		#my_warriors span.badge_circle.honor.major { background: url('../img/cuartel/ranks/honor/major.png') no-repeat; }
+		#my_warriors span.badge_circle.honor.coronel { background: url('../img/cuartel/ranks/honor/coronel.png') no-repeat; }
+		#my_warriors span.badge_circle.honor.general { background: url('../img/cuartel/ranks/honor/general.png') no-repeat; }
+		#my_warriors span.badge_circle.honor.lightwarrior { background: url('../img/cuartel/ranks/honor/lightwarrior.png') no-repeat; }
+	
+	#my_warriors span.badge_circle.justice {}	
+		#my_warriors span.badge_circle.justice.recruit { background: url('../img/cuartel/ranks/justice/recruit.png') no-repeat; }
+		#my_warriors span.badge_circle.justice.soldier { background: url('../img/cuartel/ranks/justice/soldier.png') no-repeat; }
+		#my_warriors span.badge_circle.justice.sergeant { background: url('../img/cuartel/ranks/justice/sergeant.png') no-repeat; }
+		#my_warriors span.badge_circle.justice.lieutenant { background: url('../img/cuartel/ranks/justice/lieutenant.png') no-repeat; }
+		#my_warriors span.badge_circle.justice.captain { background: url('../img/cuartel/ranks/justice/captain.png') no-repeat; }
+		#my_warriors span.badge_circle.justice.major { background: url('../img/cuartel/ranks/justice/major.png') no-repeat; }
+		#my_warriors span.badge_circle.justice.coronel { background: url('../img/cuartel/ranks/justice/coronel.png') no-repeat; }
+		#my_warriors span.badge_circle.justice.general { background: url('../img/cuartel/ranks/justice/general.png') no-repeat; }
+		#my_warriors span.badge_circle.justice.lightwarrior { background: url('../img/cuartel/ranks/justice/lightwarrior.png') no-repeat; }
+	
+	#my_warriors span.badge_circle.peace {}
+		#my_warriors span.badge_circle.peace.recruit { background: url('../img/cuartel/ranks/peace/recruit.png') no-repeat; }
+		#my_warriors span.badge_circle.peace.soldier { background: url('../img/cuartel/ranks/peace/soldier.png') no-repeat; }
+		#my_warriors span.badge_circle.peace.sergeant { background: url('../img/cuartel/ranks/peace/sergeant.png') no-repeat; }
+		#my_warriors span.badge_circle.peace.lieutenant { background: url('../img/cuartel/ranks/peace/lieutenant.png') no-repeat; }
+		#my_warriors span.badge_circle.peace.captain { background: url('../img/cuartel/ranks/peace/captain.png') no-repeat; }
+		#my_warriors span.badge_circle.peace.major { background: url('../img/cuartel/ranks/peace/major.png') no-repeat; }
+		#my_warriors span.badge_circle.peace.coronel { background: url('../img/cuartel/ranks/peace/coronel.png') no-repeat; }
+		#my_warriors span.badge_circle.peace.general { background: url('../img/cuartel/ranks/peace/general.png') no-repeat; }
+		#my_warriors span.badge_circle.peace.lightwarrior { background: url('../img/cuartel/ranks/peace/lightwarrior.png') no-repeat; }
+	
+	#my_warriors span.badge_circle.brave {}
+		#my_warriors span.badge_circle.brave.recruit { background: url('../img/cuartel/ranks/brave/recruit.png') no-repeat; }
+		#my_warriors span.badge_circle.brave.soldier { background: url('../img/cuartel/ranks/brave/soldier.png') no-repeat; }
+		#my_warriors span.badge_circle.brave.sergeant { background: url('../img/cuartel/ranks/brave/sergeant.png') no-repeat; }
+		#my_warriors span.badge_circle.brave.lieutenant { background: url('../img/cuartel/ranks/brave/lieutenant.png') no-repeat; }
+		#my_warriors span.badge_circle.brave.captain { background: url('../img/cuartel/ranks/brave/captain.png') no-repeat; }
+		#my_warriors span.badge_circle.brave.major { background: url('../img/cuartel/ranks/brave/major.png') no-repeat; }
+		#my_warriors span.badge_circle.brave.coronel { background: url('../img/cuartel/ranks/brave/coronel.png') no-repeat; }
+		#my_warriors span.badge_circle.brave.general { background: url('../img/cuartel/ranks/brave/general.png') no-repeat; }
+		#my_warriors span.badge_circle.brave.lightwarrior { background: url('../img/cuartel/ranks/brave/lightwarrior.png') no-repeat; }
+	
+	#my_warriors span.badge_circle.rm {}
+		#my_warriors span.badge_circle.rm.lightwarrior { background: url('../img/cuartel/ranks/rm/lightwarrior.png') no-repeat; }
+
+/* ==| Profile Sidebar
+ * ========================================================================== */
+
+#sidebar { float: left; margin-top: 35px; width: 220px; }
+  #sidebar section {position: relative;}
+  #sidebar section:before {
+    background: #9F0;
+    color: #005712;
+    content: '+';
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    position: absolute;
+    width: 14px;
+    top: 15px;
+    text-align: center;
+    right: 10px;
+    height: 14px;
+    line-height: 10px;
+  }
+  #sidebar section, #sidebar .sidebox {background: url('../img/cuartel/bg_sidebox.png') no-repeat top center;}
+  #sidebar section { padding-top: 15px; }
+  #sidebar .sidebox {
+    background-color: #000;
+    background-position: 0 -15px;
+    margin: 0 0 0 1px;
+    padding: 0 15px;
+    }
+  #sidebar h3 {
+    border-bottom: 1px solid #00ff33;
+    color: #99ff00;
+    font-size: 12px;
+    margin: 0;
+    padding-bottom: 7px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.50);
+    }
+  #sidebar h3 a { text-decoration: none; color: #99ff00; }
+  #sidebar .view_more {
+    background: url('../img/cuartel/bg_sidebox_viewmore.png') no-repeat top center;
+    color: #FFF;
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px 0;
+    height: 16px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,1);
+    text-transform: uppercase;
+  }
+  #sidebar .view_more:hover { background: url('../img/cuartel/bg_sidebox_viewmore_over.png') no-repeat top center; color: #99ff00; }
+#recruit {}
+#recruit p {font-size: 10px;}
+#recruit ul {list-style: none; padding:0 0 15px 0; margin: 10px 0px 0px 0px ;}
+#recruit li {float: left;}
+#recruit li img {width: 47px; height: 47px;}
+
+/* Users Search */
+#adv_search {padding-bottom: 25px;}
+	#adv_search label, #adv_search select {display: block;}
+	#adv_search select { margin-bottom: 10px; width: 80% }
+
+/* Pending Invites */
+#side_pending_invs { margin-top: 10px; }
+	#side_pending_invs img {
+		border: 4px solid #19c605;
+		float: left;
+		margin-right: 10px;
+		}
+	#side_pending_invs .profile_btn {
+		margin: 0 5px;
+		padding: 2px 13px;
+	}
+	#side_pending_invs ul {
+		margin: 0;
+		padding: 10px 0 0;	
+	}
+	#side_pending_invs li {
+		border-bottom: 1px solid #24ff28;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		text-shadow: 0 1px 1px rgba(0,0,0,0.85);
+	}
+	#side_pending_invs li:last-child {
+		border: none;
+		margin: 0;
+	}
+	#side_pending_invs h4 { margin: 0; }
+	#side_pending_invs dl { font-size: 9px; }
+	#side_pending_invs .actions {
+		clear: both;
+		font-size: 10px;
+		margin-top: 35px;
+	}
+	#side_pending_invs dt { color: #19c605; }
+	#side_pending_invs dd { color: #CCC; }
+	
+/* Recommended Warriors */
+#recommended_warriors { overflow: hidden; margin: 10px 0px 0px 0px; }
+#recommended_warriors ul { margin: 0px; }
+#recommended_warriors ul li { overflow: hidden; margin: 0px 0px 10px 0px; padding: 0px 0px 10px 0px; border-bottom: solid 1px #00ff33; }
+#recommended_warriors ul li:last-child { border: none; padding: 0px; margin: 0px 0px 15px 0px; }
+#recommended_warriors ul li div { margin: 10px 0px 0px 0px; }
+#recommended_warriors ul li div.left { float: left; width: 80px; }
+#recommended_warriors ul li div.left img { display: block; border: solid 3px #00cc00; }
+#recommended_warriors ul li div.left a.green_btn { 
+	margin: 10px 0px 0px 0px;
+	font-size: 9px;
+	text-align: center;
+	text-decoration: none;
+}
+#recommended_warriors ul li div.right { float: left; width: 95px; margin: 10px 0px 0px 13px; }
+#recommended_warriors ul li div.right h4 { margin: 0px; font-size: 14px; }
+#recommended_warriors h4 a:link,
+#recommended_warriors h4 a:visited {
+	text-decoration: none;
+}
+#recommended_warriors h4 a:hover,
+#recommended_warriors h4 a:active,
+#recommended_warriors h4 a:focus {
+	text-decoration: underline;
+}
+#recommended_warriors ul li div.right h5 { margin: 0px; color: #CCC; font-weight: normal; }
+#recommended_warriors ul li div.right p { margin: 5px 0px 0px 0px; font-size: 11px; }
+#recommended_warriors ul li div.right p span { color: #00cc00; }
+#recommended_warriors .loading,
+#recommended_warriors .feedback {
+	text-align: center;
+	color: #ccc;
+	margin: 15px auto 0 auto;
+}
+#recommended_warriors .loading {
+	margin: 22px auto 10px auto;
+}
+
+
+/* Mapa de Luz */
+
+#map_stats.light_map_view
+{
+	top: auto;
+	bottom: 10px;
+	right: 20px;
+}
+
+/* My Rewards  */
+#my_rewards { margin: 10px 0px 0px 0px; }
+#my_rewards ul { margin: 0px; }
+#my_rewards ul li { margin: 0px 0px 20px 0px;}
+#my_rewards ul li:last-child { margin: 0px; padding: 0px 0px 15px 0px; }
+#my_rewards ul li:first-child { margin: 10px 0px 20px 0px; }
+#my_rewards ul li span.reward_badge { float: left; width: 55px; height: 55px; margin: 5px 7px 10px 0px; }
+#my_rewards ul li span.gue { background: transparent url(../img/cuartel/recompensas/dedicado.png) no-repeat; } /* must create rest of images */
+#my_rewards ul li span.super { background: transparent url(../img/cuartel/recompensas/super.png) no-repeat; }
+#my_rewards ul li span.foto { background: transparent url(../img/cuartel/recompensas/fotogenico.png) no-repeat; }
+#my_rewards ul li span.amigo { background: transparent url(../img/cuartel/recompensas/mejor_amigo.png) no-repeat; }
+#my_rewards ul li span.pens { background: transparent url(../img/cuartel/recompensas/pensador.png) no-repeat; }
+#my_rewards ul li span.reclu { background: transparent url(../img/cuartel/recompensas/reclutador.png) no-repeat; }
+#my_rewards ul li span.soc { background: transparent url(../img/cuartel/recompensas/sociable.png) no-repeat; }
+#my_rewards ul li h4 { margin: 0px; color: #00ff00; font-weight: normal; font-size: 12px; }
+#my_rewards ul li p { margin: 0px; font-size: 10px; }
+
+/* My Rewards (Empty)  */
+#my_rewards_empty { margin: 10px 0px 0px 0px; padding: 0px; background: none!important; }
+#my_rewards_empty::before { top: 27px!important; }
+#my_rewards_empty .sidebox_empty {
+	background-color: #000;
+    background-position: 0px 0px;
+    margin: 0 0 0 1px;
+    padding: 10px 15px;
+	background: url('../img/cuartel/recompensas_empty_bg.png') no-repeat;
+}
+#my_rewards_empty p { margin: 10px 0px 0px 0px; font-size: 10px; }
+#my_rewards_empty a#add_reward {
+	display: block; 
+	text-indent: -99999px; 
+	width: 44px; 
+	height: 44px; 
+	margin: 10px 0px 0px 70px;
+	padding: 0px 0px 20px 0px;
+	background: transparent url(../img/cuartel/recompensas/add_reward_btn.png) no-repeat; 
+}
+
+/* ==|== IE Fixes ======================================== */
+.ie8 #my_rewards ul li { margin: 0px; padding: 0px 0px 20px 0px; }
+.ie8 #top_notifications ul li, .ie8 #recommended_warriors ul li { border: none; }
+.ie8 #facebook_warriors li a.green_button { padding: 5px 5px 5px 5px; }
+.ie8 #facebook_warriors li a { margin-top: -40px; }
+
+/* ==|== non-semantic helper classes ======================================== */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+.clear { clear: both; }
+
+/* ==|== media queries ====================================================== */
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+
+
+/* ==|== print styles ======================================================= */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
