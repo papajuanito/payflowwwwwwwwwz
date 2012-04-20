@@ -791,29 +791,4 @@ for ($i = 0; $date != '2012-04-04'; $i++)
 	 */	
 	
 	
-	public function user_options(){
-		$this->load->model('guerrero_model');
-		
-		$data = $this->input->post('select');
-		
-		
-		if ($this->input->post('activar')){
-			echo 'Activado' ;
-		}
-		else if($this->input->post('desactivar')){
-			echo 'Desactivado';
-		}
-		else if($this->input->post('bloquear')){
-			echo 'Bloquado';
-		}
-		else if($this->input->post('eliminar')){
-			foreach ($data as $k => $guerrero){
-				if($this->guerrero_model->delete_user($guerrero))
-					echo 'Success';
-				else
-					echo 'Not Success';
-			}
-		}
-	
-	}
 }

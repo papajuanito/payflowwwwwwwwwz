@@ -981,6 +981,34 @@ class Cuenta extends CI_Controller
 			return FALSE;
 		}
 	}
+	public function user_options(){
+		$this->load->model('guerrero_model');
+		
+		$data = $this->input->post('select');
+		
+		
+		if ($this->input->post('activar')){
+			echo 'Activado' ;
+		}
+		else if($this->input->post('desactivar')){
+			echo 'Desactivado';
+		}
+		else if($this->input->post('bloquear')){
+			echo 'Bloqueado';
+		}
+		else if($this->input->post('eliminar')){
+			foreach ($data as $k => $guerrero){
+				if($this->guerrero_model->delete_user($guerrero)){
+					$this->_cancel_guerrero($guerrero->id);
+					echo 'Success';
+				}
+				else
+					echo 'Not Success';
+			}
+		}
+	
+	}
+
 	private function _cancel_guerrero($guerrero_id)
 	{
 		$this->load->model('guerrero_model');
