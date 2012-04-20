@@ -981,12 +981,53 @@ class Cuenta extends CI_Controller
 			return FALSE;
 		}
 	}
+	public function user_options(){
+		$this->load->model('guerrero_model');
+		
+		$data = $this->input->post('select');
+		
+		
+		if ($this->input->post('activar')){
+			echo 'Activado' ;
+		}
+		else if($this->input->post('desactivar')){
+			echo 'Desactivado';
+		}
+		else if($this->input->post('bloquear')){
+			echo 'Bloqueado';
+		}
+		else if($this->input->post('eliminar')){
+			foreach ($data as $k => $guerrero){
+				//if($this->guerrero_model->delete_user($guerrero)){
+				
+				$this->_cancel_guerrero($guerrero);
+					echo 'Success';
+					var_dump($response);
+				//}
+				//else
+					echo 'Not Success';
+			}
+		}
+	
+	}
+
 	private function _cancel_guerrero($guerrero_id)
 	{
 		$this->load->model('guerrero_model');
-		$this->payflow->ACTION			= 'A';		// A = Add new recurring payment
-		$this->payflow->ORIGID			= $registration->pnref;									// Authorization PNREF
-		$this->payflow->process();
+		$this->load->library('payflow');
+		
+		$guerrero = $this->guerrero_model->guerreros($guerrero_id);
+		//var_dump($guerrero);
+		
+		$this->payflow->TRXTYPE  = 'R';
+		$this->payflow->ACTION	 = 'C';		// A = Add new recurring payment
+		$this->payflow->ORIGID   = $guerrero->guerrero_payment;
+		echo $guerrero->guerrero_payment;
+		$this->payflow->VENDOR   = 'rmfoundation';
+		$this->payflow->USER     = 'guerreros';
+		$this->payflow->PWD      = '00guerreroscash00';								// Authorization PNREF
+		echo 'POOOOPOOOOOO';
+		$response = $this->payflow->process();
 	}
 }
 

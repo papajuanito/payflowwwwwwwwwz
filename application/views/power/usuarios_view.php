@@ -45,7 +45,7 @@
 			</thead>
 			
 			<tbody>
-				<form method="post" action="<?php echo site_url('power/user_options') ?>">
+				<form method="post" action="<?php echo site_url('cuenta/user_options') ?>">
 				
 				<?php foreach($guerrero_list as $guerrero){?>
 				<tr>
