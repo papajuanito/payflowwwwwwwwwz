@@ -1,9 +1,17 @@
-<span>
-	<?php
-			 if($this->session->flashdata('acc_cancel_flash'))
-			 	echo $this->session->flashdata('acc_cancel_flash');
-	?>
-</span>
+<?php
+		 if($this->session->flashdata('acc_cancel_flash')){
+			echo '<div id="flash_notif_success">';			 	
+		 	echo $this->session->flashdata('acc_cancel_flash');
+		 	echo '</div>';
+		 }
+		 else if($this->session->flashdata('acc_error_flash'))
+		 {
+		 	echo '<div id="flash_notif">';			 	
+		 	echo $this->session->flashdata('acc_error_flash');
+		 	echo '</div>';
+		 }
+
+		?>
 <div id="left_col">
 <?php date_default_timezone_set('America/Puerto_Rico') ?>
 
@@ -12,7 +20,7 @@
 			<thead>
 				<tr class="toptr">
 					
-					<td colspan="4">
+					<td colspan="5">
 					<div id="orderby">
 					<form action="<?php echo $base_url ?>" method="post" name="order_form">
 					Ordenar por: 
@@ -47,6 +55,7 @@
 					<th>E-mail</th>
 					<th>Fecha de Registro</th>
 					<th>Última Conección</th>
+					<th>Status</th>
 				</tr>
 			</thead>
 			
@@ -102,6 +111,9 @@
 					 	  	echo (($curr_min - $last_min)>1)? ($curr_min - $last_min)." minutos" : ($curr_min - $last_min)." minuto";
 					 	  }
 					 ?>
+					</td>
+					<td>
+						<?php echo $guerrero->guerrero_status ?>
 					</td>
 				</tr>
 			<?php } ?>

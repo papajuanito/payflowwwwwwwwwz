@@ -987,22 +987,34 @@ class Cuenta extends CI_Controller
 		$data = $this->input->post('select');
 		
 		
-		if ($this->input->post('activar')){
+		if ($this->input->post('activar'))
+		{
 			foreach ($data as $k => $guerrero){
 				$this->_reactivate_guerrero($guerrero);
 			}
 		}
-		else if($this->input->post('desactivar')){
-			echo 'Desactivado';
+		else if($this->input->post('desactivar'))
+		{
+			foreach ($data as $k => $guerrero){
+				$this->_cancel_guerrero($guerrero);
+			}
+			
 		}
-		else if($this->input->post('bloquear')){
-			echo 'Bloqueado';
+		else if($this->input->post('bloquear'))
+		{
+			foreach ($data as $k => $guerrero){
+				
+					$this->_cancel_guerrero($guerrero);
+					//$this->guerrero_model->delete_user($guerrero)
+					//send notification
+			}
+
 		}
 		else if($this->input->post('eliminar')){
 			foreach ($data as $k => $guerrero){
-				//if($this->guerrero_model->delete_user($guerrero)){
 				
-				$this->_cancel_guerrero($guerrero);
+					$this->_cancel_guerrero($guerrero);
+					//$this->guerrero_model->delete_user($guerrero)
 			
 					
 			}
@@ -1018,6 +1030,7 @@ class Cuenta extends CI_Controller
 		$guerrero = $this->guerrero_model->guerreros($guerrero_id);
 		
 		
+		
 		$this->payflow->TRXTYPE  = 'R';
 		$this->payflow->ACTION	 = 'C';		// A = Add new recurring payment
 		$this->payflow->TENDER	 = 'C';	
@@ -1026,12 +1039,14 @@ class Cuenta extends CI_Controller
 		$this->payflow->VENDOR    = 'rmfoundation';
 		$this->payflow->USER     = 'guerreros';
 		$this->payflow->PWD      = '00guerreroscash00';								// Authorization PNREF
-		//$this->payflow->START   = 	'09242012';
-		$this->payflow->process();
-		if($txn_successful = TRUE)
+		
+		if($this->payflow->process_user()){
 			$this->session->set_flashdata ('acc_cancel_flash', 'Cuenta cancelada');
+			$this->guerrero_model->update_status($guerrero_id, 2);
+		}
 		else
-			$this->session->set_flashdata ('acc_cancel_flash', 'No se pudo tomar la accion deseada');
+			$this->session->set_flashdata ('acc_error_flash', 'No se pudo tomar la accion deseada');
+		
 		redirect('/power/usuarios');
 	
 		
@@ -1053,11 +1068,13 @@ class Cuenta extends CI_Controller
 		$this->payflow->USER     = 'guerreros';
 		$this->payflow->PWD      = '00guerreroscash00';								// Authorization PNREF
 		$this->payflow->START   = 	'09242012';
-		$this->payflow->process();
-		if($txn_successful = TRUE)
+		
+		if($this->payflow->process_user()){
 			$this->session->set_flashdata ('acc_cancel_flash', 'Cuenta reactivada');
+			$this->guerrero_model->update_status($guerrero_id, 1);
+		}
 		else
-			$this->session->set_flashdata ('acc_cancel_flash', 'No se pudo tomar la accion deseada');		
+			$this->session->set_flashdata ('acc_error_flash', 'No se pudo tomar la accion deseada');		
 		redirect('/power/usuarios');
 	
 	

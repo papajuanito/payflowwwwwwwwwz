@@ -580,10 +580,27 @@ class Payflow {
    return $this->response_handler($this->send_transaction());
   }
   catch( Exception $e ) {
+  
    throw $e;
+   
   }
  
  }
+ public function process_user() {
+ 
+  try { 
+  
+   $this->response_handler($this->send_transaction());
+   return TRUE;
+  }
+  catch( Exception $e ) {
+   return FALSE;
+   throw $e;
+   
+  }
+ 
+ }
+
 
  public function apply_associative_array( $arr, $options = array() ) {
   

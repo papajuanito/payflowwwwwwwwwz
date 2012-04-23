@@ -1580,4 +1580,34 @@ table.annotatedtimelinetable tr td{
 #legion_shield span.legion_val { background: url(../img/icon_shield_val.png) no-repeat ; }
 #legion_shield span.legion_jus { background: url(../img/icon_shield_jus.png) no-repeat ; }
 #legion_shield span.legion_paz { background: url(../img/icon_shield_paz.png) no-repeat ; }
+/* Flash data notifications*/
+#flash_notif{
+	width: 96%;
+	background: rgba(255, 0, 0, 0.4);
+	height: 20px;
+	opacity: 0.7;
+	color: black;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid red;
+	font-size: 16px;
+	text-align: center;
+	padding: 13px;
+}
+#flash_notif_success{
+	width: 96%;
+	background: rgba(0, 255, 0, 0.4);
+	height: 20px;
+	opacity: 0.7;
+	color: black;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid green;
+	font-size: 16px;
+	text-align: center;
+	padding: 13px;
+}
+
 
