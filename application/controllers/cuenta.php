@@ -1002,7 +1002,7 @@ class Cuenta extends CI_Controller
 				
 				$this->_cancel_guerrero($guerrero);
 					echo 'Success';
-					var_dump($response);
+					
 				//}
 				//else
 					echo 'Not Success';
@@ -1017,17 +1017,22 @@ class Cuenta extends CI_Controller
 		$this->load->library('payflow');
 		
 		$guerrero = $this->guerrero_model->guerreros($guerrero_id);
-		//var_dump($guerrero);
+		
 		
 		$this->payflow->TRXTYPE  = 'R';
 		$this->payflow->ACTION	 = 'C';		// A = Add new recurring payment
-		$this->payflow->ORIGID   = $guerrero->guerrero_payment;
-		echo $guerrero->guerrero_payment;
-		$this->payflow->VENDOR   = 'rmfoundation';
+		$this->payflow->TENDER	 = 'C';	
+		$this->payflow->PARTNER   = 'verisign';
+		$this->payflow->ORIGPROFILEID   = $guerrero->guerrero_payment;
+		$this->payflow->VENDOR    = 'rmfoundation';
 		$this->payflow->USER     = 'guerreros';
 		$this->payflow->PWD      = '00guerreroscash00';								// Authorization PNREF
-		echo 'POOOOPOOOOOO';
-		$response = $this->payflow->process();
+		//$this->payflow->START   = 	'09242012';
+		$this->payflow->process();
+		$this->session->set_flashdata ('auth_error', 'CANCELED ACCOUNT');
+		redirect('/power/usuarios');
+	
+		
 	}
 }
 

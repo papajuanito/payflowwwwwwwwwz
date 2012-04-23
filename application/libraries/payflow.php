@@ -33,7 +33,7 @@ class Payflow {
  public $txn_successful = null;
  public $raw_result;
  
- public $debug = false;
+ public $debug = FALSE;
  
  public function __construct() {
   
@@ -126,6 +126,7 @@ class Payflow {
    }
    
    $query[] = strtoupper($key) . '[' .strlen($value).']='.$value;
+   
   }
   
   return implode('&', $query);
@@ -456,9 +457,10 @@ class Payflow {
  }
  
 	public function response_handler( $response_arr ) {
+	
+		
 		if (!defined ('CSC_ERROR_MSG'))
 			define ('CSC_ERROR_MSG', 'El código de seguridad no es válido.'); //Your card code is invalid. Please re-enter.
-		
 		try {
 			$result_code = $response_arr['RESULT']; // get the result code to validate.
 			
@@ -574,6 +576,7 @@ class Payflow {
  public function process() {
  
   try { 
+  
    return $this->response_handler($this->send_transaction());
   }
   catch( Exception $e ) {
