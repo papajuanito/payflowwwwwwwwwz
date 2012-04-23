@@ -1881,12 +1881,20 @@ class Guerrero_model extends CI_Model
 	 * User Options
 	 */
 	 
-	 public function delete_user($user_id){
-	 	
-	 	
-	 	
+	 public function delete_user($user_id)
+	 {
 	 	if($result = $this->db->delete('guerreros', array('guerrero_id' => $user_id)))
 	 		return TRUE;
+	 }
+	 public function update_status($user_id, $i)
+	 {
+	 	if ($i == 1)
+	 		$data = array ('guerrero_status' => 'ACTIVO');
+	 	else
+	 		$data = array ('guerrero_status' => 'DESACTIVO');
+	 	$this->db->where('guerrero_id', $user_id);
+		$this->db->update('guerreros', $data); 	
+	 	
 	 }
 }
 

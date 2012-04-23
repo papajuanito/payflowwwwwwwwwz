@@ -48,10 +48,10 @@ $active_group = 'default';
 $active_record = TRUE;
 
 //$db['default']['hostname'] = 'localhost';
-$db['default']['hostname'] = 'guerrerosdeluz.org';
-$db['default']['username'] = 'guerreros_app';
-$db['default']['password'] = 'j6SycpC9FAQ44Q3y';
-$db['default']['database'] = 'guerreros';
+$db['default']['hostname'] = '174.143.28.30';//'guerrerosdeluz.org';
+$db['default']['username'] = '522606_shazam';//'guerreros_app';
+$db['default']['password'] = '00ReallyGuys00';//'j6SycpC9FAQ44Q3y';
+$db['default']['database'] = '522606_yet_more_testing';//'guerreros';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
