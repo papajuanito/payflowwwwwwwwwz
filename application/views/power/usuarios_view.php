@@ -1,3 +1,9 @@
+<span>
+	<?php
+			 if($this->session->flashdata('acc_cancel_flash'))
+			 	echo $this->session->flashdata('acc_cancel_flash');
+	?>
+</span>
 <div id="left_col">
 <?php date_default_timezone_set('America/Puerto_Rico') ?>
 

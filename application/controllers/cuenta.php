@@ -988,7 +988,9 @@ class Cuenta extends CI_Controller
 		
 		
 		if ($this->input->post('activar')){
-			echo 'Activado' ;
+			foreach ($data as $k => $guerrero){
+				$this->_reactivate_guerrero($guerrero);
+			}
 		}
 		else if($this->input->post('desactivar')){
 			echo 'Desactivado';
@@ -1001,11 +1003,8 @@ class Cuenta extends CI_Controller
 				//if($this->guerrero_model->delete_user($guerrero)){
 				
 				$this->_cancel_guerrero($guerrero);
-					echo 'Success';
+			
 					
-				//}
-				//else
-					echo 'Not Success';
 			}
 		}
 	
@@ -1029,10 +1028,42 @@ class Cuenta extends CI_Controller
 		$this->payflow->PWD      = '00guerreroscash00';								// Authorization PNREF
 		//$this->payflow->START   = 	'09242012';
 		$this->payflow->process();
-		$this->session->set_flashdata ('auth_error', 'CANCELED ACCOUNT');
+		if($txn_successful = TRUE)
+			$this->session->set_flashdata ('acc_cancel_flash', 'Cuenta cancelada');
+		else
+			$this->session->set_flashdata ('acc_cancel_flash', 'No se pudo tomar la accion deseada');
 		redirect('/power/usuarios');
 	
 		
+	}
+	private function _reactivate_guerrero($guerrero_id)
+	{
+		$this->load->model('guerrero_model');
+		$this->load->library('payflow');
+		
+		$guerrero = $this->guerrero_model->guerreros($guerrero_id);
+		
+		
+		$this->payflow->TRXTYPE  = 'R';
+		$this->payflow->ACTION	 = 'R';		// A = Add new recurring payment
+		$this->payflow->TENDER	 = 'C';	
+		$this->payflow->PARTNER   = 'verisign';
+		$this->payflow->ORIGPROFILEID   = $guerrero->guerrero_payment;
+		$this->payflow->VENDOR    = 'rmfoundation';
+		$this->payflow->USER     = 'guerreros';
+		$this->payflow->PWD      = '00guerreroscash00';								// Authorization PNREF
+		$this->payflow->START   = 	'09242012';
+		$this->payflow->process();
+		if($txn_successful = TRUE)
+			$this->session->set_flashdata ('acc_cancel_flash', 'Cuenta reactivada');
+		else
+			$this->session->set_flashdata ('acc_cancel_flash', 'No se pudo tomar la accion deseada');		
+		redirect('/power/usuarios');
+	
+	
+	
+	
+	
 	}
 }
 

@@ -31,7 +31,8 @@
 <body id="<?php echo $this->body_id ?>" data-controller="<?php echo $this->uri->rsegment (1) ?>" data-action="<?php echo $this->uri->rsegment (2) ?>">
 
 	<?php $this->load->view('power/inc_header', $header_data); ?> <!-- Header -->
-
+	
+	
   	<div id="content">
 	    <?php if (isset ($main_content)) $this->load->view($main_content); ?>
     </div><!-- power_container -->
