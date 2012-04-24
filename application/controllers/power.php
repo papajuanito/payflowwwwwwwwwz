@@ -210,9 +210,11 @@ class Power extends CI_Controller
 		$data['message_list'] = $this->Guerrero_model->messages_profile($this->uri->segment(3), $this->uri->segment(4), 'timeline');
 		
 		echo $this->load->view('power/get_messages', $data);
-		
+	}
 	
-	
+	public function delete_message(){
+		$this->Guerrero_model->delete_message($this->uri->segment(4));
+		redirect('/power/perfil' . $this->uri->segment(3));
 	}
 	//----
 	

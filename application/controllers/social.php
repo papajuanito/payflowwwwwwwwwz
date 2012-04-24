@@ -20,6 +20,9 @@ class Social extends CI_Controller
 	{
 		parent::__construct();
 		
+		date_default_timezone_set('America/Los_Angeles');
+
+		
 		//$this->output->enable_profiler (TRUE);
 		
 		$this->lang->load ('social');

@@ -6,18 +6,11 @@ $(document).ready(function(){
 	var num_messages = <?php echo $message_number ?>;
 	var loaded_messages = 0;
 	
-		
-		
 		$("#more_button").click(function(){
 			
 			loaded_messages += 5;
-			$.get("<?php echo site_url('power/get_messages_profile') ?>/" + <?php echo $guerrero->guerrero_id ?> + "/" + loaded_messages, function(data){
-				
-				
-				
-			
-				$("#messages_table").append(data);
- 				
+			$.get("<?php echo site_url('power/get_messages_profile') ?>/" + <?php echo $guerrero->guerrero_id ?> + "/" + loaded_messages, function(data){					
+				$("#messages_table").append(data); 				
 			});
  
 			if(loaded_messages >= num_messages - 5)
@@ -120,7 +113,8 @@ $(document).ready(function(){
 							<td><img src="<?php if (!$message->send_avatar) echo base_url ('img/user_profiles/user_placeholder.png'); else echo base_url ('uploads/avatars') . '/'. $message->send_avatar ?>"/></td>
 							<td>
 								<?php echo '<h2>'.$message->send_name .'</h2>' .'Escribe: '; ?>
-								<?php echo $message->message_text; ?>
+								<?php echo $message->message_text; ?><br>
+								<a href="<?php echo site_url('power/delete_message/' . $this->uri->segment(3) . '/' . $message->message_id ) ?>">Borrar este mensaje</a>
 							<br /><br />
 							</td>
 													

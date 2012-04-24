@@ -751,6 +751,10 @@ class Guerrero_model extends CI_Model
 	}
 	
 	
+	public function delete_message($message_id){
+		$this->db->delete($this->messages_table, array('message_id' => $message_id)); 
+	}
+	
 	//----
 	
 	
