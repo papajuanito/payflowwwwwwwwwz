@@ -1,3 +1,16 @@
+<?php
+		 if($this->session->flashdata('profile_success')){
+			echo '<div id="flash_notif_success">';			 	
+		 	echo $this->session->flashdata('profile_success');
+		 	echo '</div>';
+		 }
+		 else if($this->session->flashdata('profile_error'))
+		 {
+		 	echo '<div id="flash_notif">';			 	
+		 	echo $this->session->flashdata('profile_error');
+		 	echo '</div>';
+		 }
+?>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -84,7 +97,20 @@ $(document).ready(function(){
 			</tr>
 			<tr>
 				<td>Zip Code: <p><?php echo $guerrero->guerrero_zip; ?></p></td>
-				<td>Tipo de Donación: <p><?php echo $guerrero->guerrero_name; ?></p></td>
+				<td>Tipo de Donación: <p><?php switch($guerrero->guerrero_subscription_type_id){
+													case 1:
+														echo 'Basic';
+														break;
+													case 2:
+														echo 'Bronze';
+														break;
+													case 3:
+														echo 'Silver';
+														break;
+													case 4:
+														echo 'Gold';
+														break;
+										} ?></p></td>
 			</tr>
 			<tr>
 				<td>Fecha de Nacimiento:  <br /> <p><?php echo $guerrero->guerrero_birthday; ?></p></td>

@@ -751,11 +751,28 @@ class Guerrero_model extends CI_Model
 	}
 	
 	
-	public function delete_message($message_id){
-		$this->db->delete($this->messages_table, array('message_id' => $message_id)); 
+	/*public function delete_message($message_id){
+        if(empty($message_id)){
+            return false;
+        }
+        if(!$result = $this->db->delete($this->messages_table, array('message_id' => $message_id))){
+            return false;
+        }
+        return true;
+   }	
+	*/
+	
+	public function delete_message($message_id)
+	{
+		if(empty($message_id)){
+			return FALSE;
+		}
+		if(!$result = $this->db->delete('messages', array('message_id' => $message_id))){
+			return FALSE;
+		}
+		return TRUE;
 	}
 	
-	//----
 	
 	
 	/**
@@ -1882,7 +1899,7 @@ class Guerrero_model extends CI_Model
 	
 	
 	/**
-	 * User Options
+	 * User Options functions
 	 */
 	 
 	 public function delete_user($user_id)
@@ -1890,6 +1907,8 @@ class Guerrero_model extends CI_Model
 	 	if($result = $this->db->delete('guerreros', array('guerrero_id' => $user_id)))
 	 		return TRUE;
 	 }
+	 
+	 //Updates status from Active to Inactive when an account is blocked
 	 public function update_status($user_id, $i)
 	 {
 
@@ -1897,6 +1916,7 @@ class Guerrero_model extends CI_Model
 	 		$data = array ('guerrero_status' => 'ACTIVO');
 	 	else
 	 		$data = array ('guerrero_status' => 'DESACTIVO');
+	 	
 	 	$this->db->where('guerrero_id', $user_id);
 		$this->db->update('guerreros', $data); 	
 	 	

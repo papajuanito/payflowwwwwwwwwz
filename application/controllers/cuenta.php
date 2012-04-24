@@ -968,6 +968,11 @@ class Cuenta extends CI_Controller
 				$this->email->subject ('Solicitud de Cambio de Contraseña - Guerreros de Luz');
 		        $this->email->message ($this->load->view ('cuenta/recovery_email_view', array ('guerrero'=>$guerrero), TRUE));
 				break;
+			case 'cancelation'
+				$this->email->initialize (array('mailtype' => 'html'));
+				$this->email->subject('Cancelación de Cuenta - Guerreros de Luz');
+				$this->email->message($this->load->view('cuenta/cancelation_notification_view', array('guerrero' => $guerrero), TRUE));
+				break;
 			default:
 				break;
 			}
@@ -1005,8 +1010,14 @@ class Cuenta extends CI_Controller
 			foreach ($data as $k => $guerrero){
 				
 					$this->_cancel_guerrero($guerrero);
-					//$this->guerrero_model->delete_user($guerrero)
-					//send notification
+					if($this->guerrero_model->delete_user($guerrero))
+						$this->session->set_flashdata ('acc_cancel_flash', 'Cuenta cancelada');
+					else
+						$this->session->set_flashdata ('acc_error_flash', 'No se pudo tomar la accion deseada');
+					
+					/*WAITING FOR COPY*/
+					//$this->_send_guerrero_email ($guerrero, 'cancelation');
+
 			}
 
 		}
@@ -1014,11 +1025,14 @@ class Cuenta extends CI_Controller
 			foreach ($data as $k => $guerrero){
 				
 					$this->_cancel_guerrero($guerrero);
-					//$this->guerrero_model->delete_user($guerrero)
-			
-					
+					if($this->guerrero_model->delete_user($guerrero))
+						$this->session->set_flashdata ('acc_cancel_flash', 'Cuenta cancelada');
+					else
+						$this->session->set_flashdata ('acc_error_flash', 'No se pudo tomar la accion deseada');
 			}
 		}
+		
+		redirect('/power/usuarios');
 	
 	}
 
@@ -1046,11 +1060,8 @@ class Cuenta extends CI_Controller
 		}
 		else
 			$this->session->set_flashdata ('acc_error_flash', 'No se pudo tomar la accion deseada');
-		
-		redirect('/power/usuarios');
-	
-		
 	}
+	
 	private function _reactivate_guerrero($guerrero_id)
 	{
 		$this->load->model('guerrero_model');
@@ -1075,12 +1086,6 @@ class Cuenta extends CI_Controller
 		}
 		else
 			$this->session->set_flashdata ('acc_error_flash', 'No se pudo tomar la accion deseada');		
-		redirect('/power/usuarios');
-	
-	
-	
-	
-	
 	}
 }
 

@@ -211,11 +211,51 @@ class Power extends CI_Controller
 		
 		echo $this->load->view('power/get_messages', $data);
 	}
-	
-	public function delete_message(){
-		$this->Guerrero_model->delete_message($this->uri->segment(4));
-		redirect('/power/perfil' . $this->uri->segment(3));
-	}
+	/*public function delete_message(){
+        $this->load->model('guerrero_model');
+ 
+ 		$message_id = $this->uri->segment(4);
+        $user_id = $this->uri->segment(3);
+ 
+        try{
+            if(!is_numeric($message_id)){
+                throw new Exception('El mensaje a borrar es invalid.');
+            }
+            if(!$this->Guerrero_model->delete_message($message_id)){
+                throw new Exception('No se pudo borrar el mensaje');
+            }
+            $this->session->set_flashdata('profile_success', 'El mensaje fue borrado exitosamente');
+        }catch(Exception $e){
+            $this->session->set_flashdata('profile_error', $e->getMessage());
+            redirect('/power/perfil/' . $user_id);
+        }
+        redirect('/power/perfil/' . $user_id);
+    }*/
+ 	public function delete_message()
+ 	{
+ 		$this->load->model('guerrero_model');
+ 		
+ 		$message_id = $this->uri->segment(4);
+ 		$user_id = $this->uri->segment(3);
+ 		
+ 		try{
+ 			if(!is_numeric($message_id)){
+ 				throw new Exception('El mensaje a borrar es invalido.');
+ 			}
+ 			if(!$this->guerrero_model->delete_message($message_id)){
+ 				throw new Exception('No se pudo borrar el mensaje');
+ 			}
+ 			$this->session->set_flashdata('profile_success', 'El mensaje fue borrado exitosamente');
+ 		}catch(Exception $e){
+ 			$this->session->set_flashdata('profile_error', $e->getMessage());
+ 			redirect('/power/perfil/' . $user_id);
+ 		}
+ 			redirect('/power/perfil/' . $user_id);
+ 			
+ 	}
+ 
+ 
+ 
 	//----
 	
 	/**
