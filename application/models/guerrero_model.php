@@ -1888,6 +1888,7 @@ class Guerrero_model extends CI_Model
 	 }
 	 public function update_status($user_id, $i)
 	 {
+
 	 	if ($i == 1)
 	 		$data = array ('guerrero_status' => 'ACTIVO');
 	 	else
