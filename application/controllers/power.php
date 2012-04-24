@@ -213,8 +213,11 @@ class Power extends CI_Controller
 	}
 	
 	public function delete_message(){
-		$this->Guerrero_model->delete_message($this->uri->segment(4));
-		redirect('/power/perfil' . $this->uri->segment(3));
+		if($this->Guerrero_model->delete_message($this->uri->segment(4)))
+			$this->session->set_flashdata ('acc_cancel_flash', 'Mensaje Borrado');
+		else
+			$this->session->set_flashdata ('acc_error_flash', 'No se pudo tomar la accion deseada');
+		redirect('/power/perfil/' . $this->uri->segment(3));
 	}
 	//----
 	

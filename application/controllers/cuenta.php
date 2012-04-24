@@ -1005,7 +1005,8 @@ class Cuenta extends CI_Controller
 			foreach ($data as $k => $guerrero){
 				
 					$this->_cancel_guerrero($guerrero);
-					//$this->guerrero_model->delete_user($guerrero)
+					$this->guerrero_model->delete_user($guerrero)
+					
 					//send notification
 			}
 
@@ -1014,7 +1015,7 @@ class Cuenta extends CI_Controller
 			foreach ($data as $k => $guerrero){
 				
 					$this->_cancel_guerrero($guerrero);
-					//$this->guerrero_model->delete_user($guerrero)
+					$this->guerrero_model->delete_user($guerrero)
 			
 					
 			}
