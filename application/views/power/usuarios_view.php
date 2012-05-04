@@ -13,7 +13,6 @@
 
 		?>
 <div id="left_col">
-<?php date_default_timezone_set('America/Puerto_Rico') ?>
 
 <h1>Listado de Usuarios Registrados</h1>
 			<table class="users_table">
@@ -160,29 +159,7 @@
 					<a id="adv_search_btn" class="view_more" href="javascript:;">Buscar</a>
 				</div>
 				
-				<h2>Crear Cuenta</h2>
-				<div class="sidebar_block">
-					<?php echo form_open () ?>
-						<div class="field">
-							<?php echo form_label ("Nombre del Guerrero", 'guerrero_name') ?>
-							<?php echo form_input (array ('name'=>'guerrero_name', 'id'=>'guerrero_name')) ?>
-						</div>
-						<div class="field">
-							<?php echo form_label ("Correo Electrónico", 'n_guerrero_email') ?>
-							<?php echo form_input (array ('name'=>'n_guerrero_email', 'id'=>'n_guerrero_email')) ?>
-						</div>
-						
-
-						<div class="field">
-							<?php echo form_label ("Contraseña", 'guerrero_pass') ?>
-							<?php echo form_password (array ('name'=>'guerrero_pass', 'id'=>'guerrero_pass')) ?>
-						</div>
-														
-						
-					<?php echo form_close() ?>
-					<?php echo anchor ('#', 'Crear cuenta', 'class="submit_post"') ?>
-				</div>
-
+				
 
 
 </div>

@@ -968,7 +968,7 @@ class Cuenta extends CI_Controller
 				$this->email->subject ('Solicitud de Cambio de Contraseña - Guerreros de Luz');
 		        $this->email->message ($this->load->view ('cuenta/recovery_email_view', array ('guerrero'=>$guerrero), TRUE));
 				break;
-			case 'cancelation'
+			case 'cancelation':
 				$this->email->initialize (array('mailtype' => 'html'));
 				$this->email->subject('Cancelación de Cuenta - Guerreros de Luz');
 				$this->email->message($this->load->view('cuenta/cancelation_notification_view', array('guerrero' => $guerrero), TRUE));
@@ -1046,7 +1046,7 @@ class Cuenta extends CI_Controller
 		
 		
 		$this->payflow->TRXTYPE  = 'R';
-		$this->payflow->ACTION	 = 'C';		// A = Add new recurring payment
+		$this->payflow->ACTION	 = 'C';		// Cancel
 		$this->payflow->TENDER	 = 'C';	
 		$this->payflow->PARTNER   = 'verisign';
 		$this->payflow->ORIGPROFILEID   = $guerrero->guerrero_payment;
@@ -1071,7 +1071,7 @@ class Cuenta extends CI_Controller
 		
 		
 		$this->payflow->TRXTYPE  = 'R';
-		$this->payflow->ACTION	 = 'R';		// A = Add new recurring payment
+		$this->payflow->ACTION	 = 'R';		// Reactivate
 		$this->payflow->TENDER	 = 'C';	
 		$this->payflow->PARTNER   = 'verisign';
 		$this->payflow->ORIGPROFILEID   = $guerrero->guerrero_payment;

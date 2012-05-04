@@ -1947,14 +1947,14 @@ if(data.guerreros[i].guerrero_is_name_private == 1)
 							
 							
 							
-							
-							for(i=0; i<7 ; i++)
+							// 30 significa que esta limitado a 30 dia
+							for(i=0; i<d.days_stats.length ; i++)
 							{
-								year = d.seven_days_stats[i].year;
-								mes = d.seven_days_stats[i].mes;
-								dia = d.seven_days_stats[i].dia;
+								year = d.days_stats[i].year;
+								mes = d.days_stats[i].mes;
+								dia = d.days_stats[i].dia;
 								
-								amount = parseInt(d.seven_days_stats[i].amount);
+								amount = parseInt(d.days_stats[i].amount);
 								data_array.push([new Date(year, mes-1 ,dia),amount]);
 								
 							}
@@ -1983,11 +1983,12 @@ if(data.guerreros[i].guerrero_is_name_private == 1)
 					data.addRows(data_array);
 										
 										var options = {
-  								          displayRangeSelector : false,
+  								          displayRangeSelector : true,
 								          fill: 30,
   								          displayZoomButtons: false,
   								          displayAnnotations: false,
-  								          scaleType: 'allfixed'
+  								          scaleType: 'allfixed',
+  								          allowHtml: true
 								        };
 								
 								        var chart = new google.visualization.AnnotatedTimeLine(document.getElementById('money_chart'));

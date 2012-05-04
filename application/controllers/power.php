@@ -51,7 +51,7 @@ class Power extends CI_Controller
 			$data['raised_money']     = 0;
 			$data['num_of_trophies']  = 0;
 			$data['header_data']  = array ('page'=>$this->uri->segment(1), 'section'=>'app');
-			
+						
 			$breakdown = $this->Guerrero_model->guerreros_breakdown();
 			
 			$legions_breakdown = $this->Guerrero_model->guerreros_by_legions();
@@ -591,7 +591,7 @@ foreach ($breakdown as $subscription) {
 		 'abr.', 'mayo' , 'jun.', 'jul.', 'agosto', 'sept.','oct.','nov.','dic.');
 		
 		try {
-			$last_seven_days_stats = $this->Guerrero_model->get_last_seven_money_entries();
+			$last_seven_days_stats = $this->Guerrero_model->get_last_money_entries();
 			
 			if (!$last_seven_days_stats )
 				throw new Exception;
@@ -611,7 +611,7 @@ foreach ($breakdown as $subscription) {
 								);
 			}
 						
-			echo json_encode (array ('response'=>'success', 'seven_days_stats'=>$data));
+			echo json_encode (array ('response'=>'success', 'days_stats'=>$data));
 		}
 		catch (Exception $e) {
 			echo json_encode (array ('response'=>'error'));

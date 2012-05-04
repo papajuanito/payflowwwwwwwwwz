@@ -7,7 +7,7 @@
 		
 		<div id="user_options">
 		<ul>
-			<li>Bienvenid@, <!-- <a href="#"><?php echo $this->admin->admin_name ?></a> --></li>
+			<li>Bienvenid@</li>
 			<li><?php echo anchor ('power/log_out', 'Desconectarme') ?></li>
 		</ul>
 		</div>

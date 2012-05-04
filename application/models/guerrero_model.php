@@ -1693,10 +1693,11 @@ class Guerrero_model extends CI_Model
 	 	return $result->result();
 	 }
 	 
-	 public function get_last_seven_money_entries()
+	 //get the lasts days stats the amount is definied by var $days default 30days
+	 public function get_last_money_entries($days = 30)
 	 {	
 	 	$this->db->order_by('id', 'DESC');
-	 	$this->db->limit(7);
+	 	$this->db->limit($days);//limited to $days amount
 	 	$result = $this->db->get('money_recolected');
 	  	$result_array = array_reverse ($result->result());
 	  	return $result_array;
